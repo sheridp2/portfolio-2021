@@ -1,31 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
+// import React, { useContext, useState, useEffect } from "react";
+// import { Link, NavLink } from "react-router-dom";
 
-function NavBar() {
-  return (
-    <div>
-      <div className="navigation">
-        <div className="navigation-sub">
-          <Link to="/" className="item">
-            Main
-          </Link>
-          <br />
-          <Link to="/projects" className="item">
-            Projects
-          </Link>
-          <br />
-          <Link to="/resume" className="item">
-            Resume
-          </Link>
-          <br />
-          <Link to="/trivia" className="item">
-            Trivia and
-            <br /> Special Skills
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
+// import Headroom from "headroom.js";
+// // reactstrap components
+// import { Nav, NavItem } from "reactstrap";
 
-export default NavBar;
+// function Nav() {
+//   //   const pathname = window.location.pathname;
+
+//   //   let path = pathname === "/" ? "home" : pathname.split("/").pop();
+
+//   //   const [activeItem, setActiveItem] = useState(path);
+//   //   const handleItemClick = (e, { name }) => setActiveItem(name);
+//   //   useEffect(() => {
+//   //     console.log(pathname);
+//   //   }, [pathname]);
+
+//   return (
+//     <Navbar>
+//       <NavLink to="/">Home</NavLink>
+
+//       <NavLink to="/projects">Projects</NavLink>
+//       <NavLink to="/resume">Resume</NavLink>
+//     </Navbar>
+//   );
+// }
+
+// export default Nav;

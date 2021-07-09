@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Nav />
+        {/* <Nav /> */}
         <Route exact path="/" component={Main} />
         <Route exact path="/projects" component={Projects} />
       </div>

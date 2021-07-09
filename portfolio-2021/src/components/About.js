@@ -10,7 +10,11 @@ function AboutSkills() {
       <>
         <Grid key={tech.skillName} item sm={1} style={{ margin: "0px 14px" }}>
           <div
-            className="icon icon-xl icon-shape shadow rounded-circle mb-4"
+            className="icon icon-xl icon-shape shadow rounded-circle mb-4 "
+            style={{
+              color: "#e8e3e3",
+              backgroundColor: "rgba(255, 255, 255, 0.7)",
+            }}
             id={tech.skillName}
           >
             <span
