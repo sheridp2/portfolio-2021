@@ -10,7 +10,25 @@ const ProjectsData = [
     backendRepo: "https://github.com/sheridp2/react-social-media-app-backend",
     url: "https://react-social-media-app.vercel.app/",
     company: "Personal",
-    technolgies: ["React", "GraphQL", "MongoDB", "Node", "Express"],
+    technolgies: [
+      { skillName: "React", fontAwesomeClassname: "logos:react" },
+      {
+        skillName: "GraphQL",
+        fontAwesomeClassname: "",
+      },
+      {
+        skillName: "MongoDB",
+        fontAwesomeClassname: "vscode-icons:file-type-mongo",
+      },
+      {
+        skillName: "NodeJS",
+        fontAwesomeClassname: "logos:nodejs-icon",
+      },
+      {
+        skillName: "GraphQL",
+        fontAwesomeClassname: "vscode-icons:file-type-graphql",
+      },
+    ],
     featured: true,
   },
   {
@@ -22,7 +40,11 @@ const ProjectsData = [
     backendRepo: "N/A",
     url: "https://guesswork.herokuapp.com/",
     company: "Personal",
-    technolgies: ["React", "Redux"],
+    technolgies: [
+      { skillName: "React", fontAwesomeClassname: "logos:react" },
+      ,
+      { skillName: "Redux", fontAwesomeClassname: "" },
+    ],
     featured: false,
   },
   {
@@ -33,7 +55,20 @@ const ProjectsData = [
     backendRepo: "N/A",
     url: "http://dashboardaccessibility.azurewebsites.net/",
     company: "ISoftStone",
-    technolgies: ["Accessibility", "React", "Node", "Express"],
+    technolgies: [
+      { skillName: "Accessibility", fontAwesomeClassname: "" },
+      ,
+      { skillName: "React", fontAwesomeClassname: "logos:react" },
+      ,
+      {
+        skillName: "NodeJS",
+        fontAwesomeClassname: "logos:nodejs-icon",
+      },
+      {
+        skillName: "Express",
+        fontAwesomeClassname: "",
+      },
+    ],
     featured: true,
   },
 ];

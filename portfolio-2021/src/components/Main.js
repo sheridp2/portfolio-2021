@@ -38,13 +38,13 @@ const useStyles = makeStyles((theme) => ({
 function Main(props) {
   const classes = useStyles();
   return (
-    <div>
+    <div className={classes.root}>
       <div className="position-relative">
         <section
           className="section section-lg section-shaped pb-250"
           style={{ paddingTop: 0 }}
         >
-          <div className="shape shape-style-1 bg-gradient-info">
+          <div className="shape shape-style-1 bg-gradient-green">
             <span />
             <span />
             <span />
@@ -71,9 +71,6 @@ function Main(props) {
               </div>
             </Fade>
           </Container>
-          <Fade bottom duration={1000} distance="40px">
-            <About />
-          </Fade>
           <div className="separator separator-bottom separator-skew">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -87,6 +84,9 @@ function Main(props) {
             </svg>
           </div>
         </section>
+        <Fade bottom duration={1000} distance="40px">
+          <About />
+        </Fade>
       </div>
     </div>
   );

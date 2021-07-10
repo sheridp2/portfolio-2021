@@ -25,6 +25,8 @@ function Projects() {
   const [projectFeatured, setProjectFeatured] = useState(true);
   const [projectFilter, setProjectFilter] = useState("All");
 
+  function workPersonalFilter(params) {}
+
   return (
     <div className={classes.root}>
       <div className="position-relative">
@@ -32,7 +34,7 @@ function Projects() {
           className="section section-lg section-shaped pb-250"
           style={{ paddingTop: 0 }}
         >
-          <div className="shape shape-style-1 bg-gradient-info">
+          <div className="shape shape-style-1 bg-gradient-green">
             <span />
             <span />
             <span />
