@@ -27,7 +27,16 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     width: "100%",
-    // backgroundColor: "#ecf4f8",
+    [theme.breakpoints.down("xs")]: {
+      position: "relative",
+      top: "50px",
+    },
+  },
+  lottieImage: {
+    [theme.breakpoints.down("xs")]: {
+      position: "relative",
+      top: "-50px",
+    },
   },
   socialMedias: {
     paddingLeft: 20,
@@ -64,7 +73,7 @@ function Main(props) {
 
                     <p className={classes.socialMedias}>Social media Icons</p>
                   </Grid>
-                  <Grid item sm={6}>
+                  <Grid item sm={6} className={classes.lottieImage}>
                     <LottieAnimate animationData={worker} />
                   </Grid>
                 </Grid>

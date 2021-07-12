@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Container, Grid } from "@material-ui/core";
-import ProjectsData from "../assets/ProjectsData";
+import projectsData from "../assets/ProjectsData";
 import { Fade } from "react-reveal";
 import { Badge } from "reactstrap";
 
@@ -16,9 +16,25 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function ProjectList(props) {
+  const [diplayedProjects, setDisplayedProjects] = useState(projectsData);
+  const tempArray = [];
+  useEffect(() => {
+    projectsData.map((project) => {
+      if (props.filter === "Professional" && project.company !== "Personal") {
+        tempArray.push(project);
+      }
+      if (props.filter === "Personal" && project.company === "Personal") {
+        tempArray.push(project);
+      }
+      if (props.filter === "All Projects") {
+        tempArray.push(project);
+      }
+    });
+    setDisplayedProjects(tempArray);
+  }, [props.filter]);
+
   const classes = useStyles();
-  let mappedProjects = ProjectsData.map((project, index) => {
-    console.log(project);
+  let mappedProjects = diplayedProjects.map((project, index) => {
     return (
       <Fade left duration={1000} distance="200px" key={project.name}>
         <div

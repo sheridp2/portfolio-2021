@@ -4,6 +4,12 @@ import { Container, Grid } from "@material-ui/core";
 import ProjectsList from "./ProjectsList";
 import developement from "../assets/lottie/64110-web-development.json";
 import { Fade } from "react-reveal";
+import {
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  Dropdown,
+} from "reactstrap";
 
 import LottieAnimate from "./LottieAnimate";
 
@@ -23,9 +29,15 @@ const useStyles = makeStyles((theme) => ({
 function Projects() {
   const classes = useStyles();
   const [projectFeatured, setProjectFeatured] = useState(true);
-  const [projectFilter, setProjectFilter] = useState("All");
+  const [projectFilter, setProjectFilter] = useState("All Projects");
 
-  function workPersonalFilter(params) {}
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggle = () => setDropdownOpen((prevState) => !prevState);
+
+  function workPersonalFilter(e) {
+    setProjectFilter(e.target.value);
+  }
 
   return (
     <div className={classes.root}>
@@ -52,6 +64,38 @@ function Projects() {
                   </Grid>
                   <Grid item sm={6} className={classes.meText}>
                     <h1 className={classes.mainText}>Projects</h1>
+                    <br />
+                    <Dropdown
+                      direction="down"
+                      isOpen={dropdownOpen}
+                      toggle={toggle}
+                    >
+                      <DropdownToggle caret color="secondary">
+                        Project Filter
+                      </DropdownToggle>
+
+                      <DropdownMenu aria-labelledby="dropdownMenuButton">
+                        <DropdownItem
+                          onClick={(e) => workPersonalFilter(e)}
+                          value="All Projects"
+                        >
+                          All Projects
+                        </DropdownItem>
+                        <DropdownItem
+                          onClick={(e) => workPersonalFilter(e)}
+                          value="Professional"
+                        >
+                          Professional
+                        </DropdownItem>
+
+                        <DropdownItem
+                          onClick={(e) => workPersonalFilter(e)}
+                          value="Personal"
+                        >
+                          Personal
+                        </DropdownItem>
+                      </DropdownMenu>
+                    </Dropdown>
                   </Grid>
                 </Grid>
               </div>
