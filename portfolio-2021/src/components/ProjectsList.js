@@ -8,9 +8,12 @@ import { Badge } from "reactstrap";
 const useStyles = makeStyles((theme) => ({
   returnedProjects: {
     position: "relative",
-    top: "-200px",
+    top: "-250px",
+    [theme.breakpoints.down("md")]: {
+      top: "-150px",
+    },
     [theme.breakpoints.down("xs")]: {
-      top: "0px",
+      top: "-170px",
     },
   },
 }));

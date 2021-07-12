@@ -1,19 +1,20 @@
 import React from "react";
 import { Container, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { UncontrolledTooltip, Button } from "reactstrap";
+import { UncontrolledTooltip } from "reactstrap";
 
 import TechData from "../assets/TechData";
 
 const useStyles = makeStyles((theme) => ({
   returnedTech: {
     position: "relative",
-    top: "-300px",
+    top: "-220px",
+
     [theme.breakpoints.down("md")]: {
       top: "-200px",
     },
     [theme.breakpoints.down("sm")]: {
-      top: "-150px",
+      top: "-120px",
     },
   },
 }));
@@ -54,13 +55,17 @@ function AboutSkills() {
   return (
     <div className={classes.returnedTech}>
       <Container>
-        <Grid container xs={12}>
+        <Grid container>
           <Grid item>
             <h1>Main Tech Stacks</h1>
             <Grid container spacing={2}>
               {allTech}
             </Grid>
           </Grid>
+        </Grid>
+        <br />
+        <Grid container>
+          <h1>About me</h1>
         </Grid>
       </Container>
     </div>

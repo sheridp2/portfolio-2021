@@ -24,6 +24,16 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+    [theme.breakpoints.down("xs")]: {
+      position: "relative",
+      top: "-50px",
+    },
+  },
+  mainContainer: {
+    [theme.breakpoints.down("xs")]: {
+      position: "relative",
+      top: "-50px",
+    },
   },
 }));
 function Projects() {
@@ -58,7 +68,7 @@ function Projects() {
           <Container>
             <Fade top duration={1000} distance="40px">
               <div>
-                <Grid container>
+                <Grid container className={classes.mainContainer}>
                   <Grid item sm={6}>
                     <LottieAnimate animationData={developement} />
                   </Grid>
@@ -69,6 +79,7 @@ function Projects() {
                       direction="down"
                       isOpen={dropdownOpen}
                       toggle={toggle}
+                      style={{ maxWidth: 100 }}
                     >
                       <DropdownToggle caret color="secondary">
                         Project Filter

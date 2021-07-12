@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Container, Grid } from "@material-ui/core";
+import { UncontrolledTooltip } from "reactstrap";
 
 import About from "./About";
 // import selfPic from "../assets/IMG_7976.jpg";
@@ -14,12 +15,10 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   mainText: {
-    paddingLeft: 20,
-    fontSize: "44px",
+    fontSize: "55px",
   },
   secondaryText: {
-    paddingLeft: 20,
-    fontSize: "24px",
+    fontSize: "30px",
   },
 
   meText: {
@@ -35,11 +34,10 @@ const useStyles = makeStyles((theme) => ({
   lottieImage: {
     [theme.breakpoints.down("xs")]: {
       position: "relative",
-      top: "-50px",
+      top: "-40px",
     },
   },
   socialMedias: {
-    paddingLeft: 20,
     fontSize: "20px",
   },
 }));
@@ -67,11 +65,107 @@ function Main(props) {
             <Fade top duration={1000} distance="40px">
               <div>
                 <Grid container>
-                  <Grid item sm={6} className={classes.meText}>
+                  <Grid
+                    item
+                    sm={6}
+                    className={classes.meText}
+                    style={{ zIndex: 10 }}
+                  >
                     <h1 className={classes.mainText}>Patrick Sheridan</h1>
                     <p className={classes.secondaryText}>Frontend Developer</p>
-
-                    <p className={classes.socialMedias}>Social media Icons</p>
+                    <Grid container spacing={4}>
+                      <Grid item md={1} xs={2}>
+                        <a
+                          href="https://github.com/sheridp2"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <div
+                            className="icon icon-sm"
+                            style={{
+                              color: "#e8e3e3",
+                            }}
+                            id="github"
+                          >
+                            <span
+                              className="iconify"
+                              data-icon="logos:github-icon"
+                              data-inline="false"
+                              style={{ height: 35, width: 35 }}
+                            ></span>
+                          </div>
+                          <UncontrolledTooltip
+                            delay={0}
+                            placement="bottom"
+                            target="github"
+                            style={{ fontSize: 15 }}
+                          >
+                            Github: https://github.com/sheridp2
+                          </UncontrolledTooltip>
+                        </a>
+                      </Grid>
+                      <Grid item md={1} xs={2}>
+                        <a
+                          href="https://www.linkedin.com/in/patrick-sheridan/"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <div
+                            className="icon icon-sm"
+                            style={{
+                              color: "#e8e3e3",
+                            }}
+                            id="linkedin"
+                          >
+                            <span
+                              className="iconify"
+                              data-icon="logos:linkedin-icon"
+                              data-inline="false"
+                              style={{ height: 35, width: 35 }}
+                            ></span>
+                            <UncontrolledTooltip
+                              delay={0}
+                              placement="bottom"
+                              target="linkedin"
+                              style={{ fontSize: 15 }}
+                            >
+                              Linkedin:
+                              https://www.linkedin.com/in/patrick-sheridan/
+                            </UncontrolledTooltip>
+                          </div>
+                        </a>
+                      </Grid>
+                      <Grid item md={1} xs={2}>
+                        <a
+                          href="mailto:sheridp2@gmail.com"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <div
+                            className="icon icon-sm"
+                            style={{
+                              color: "#e8e3e3",
+                            }}
+                            id="gmail"
+                          >
+                            <span
+                              className="iconify"
+                              data-icon="logos:google-gmail"
+                              data-inline="false"
+                              style={{ height: 35, width: 35 }}
+                            ></span>
+                            <UncontrolledTooltip
+                              delay={0}
+                              placement="bottom"
+                              target="gmail"
+                              style={{ fontSize: 15 }}
+                            >
+                              Gmail: sheridp2@gmail.com
+                            </UncontrolledTooltip>
+                          </div>
+                        </a>
+                      </Grid>
+                    </Grid>
                   </Grid>
                   <Grid item sm={6} className={classes.lottieImage}>
                     <LottieAnimate animationData={worker} />
