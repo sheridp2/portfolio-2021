@@ -11,10 +11,13 @@ const useStyles = makeStyles((theme) => ({
     top: "-220px",
 
     [theme.breakpoints.down("md")]: {
-      top: "-200px",
+      top: "-170px",
     },
     [theme.breakpoints.down("sm")]: {
-      top: "-120px",
+      top: "-110px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      top: "-150px",
     },
   },
 }));
@@ -66,6 +69,24 @@ function AboutSkills() {
         <br />
         <Grid container>
           <h1>About me</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li>Aliquam tincidunt mauris eu risus.</li>
+            <li>Vestibulum auctor dapibus neque.</li>
+            <li>Nunc dignissim risus id metus.</li>
+            <li>Cras ornare tristique elit.</li>
+          </ul>
         </Grid>
       </Container>
     </div>

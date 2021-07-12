@@ -1,24 +1,71 @@
-import React, { useContext, useState, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
-// import { Nav, NavItem } from "reactstrap";
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+
+// reactstrap components
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink as NavRoute,
+} from "reactstrap";
 
 function VerticalNav() {
-  //   const pathname = window.location.pathname;
+  const [isOpen, setIsOpen] = useState(true);
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 1450);
 
-  //   let path = pathname === "/" ? "home" : pathname.split("/").pop();
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 1450);
+  };
 
-  //   const [activeItem, setActiveItem] = useState(path);
-  //   const handleItemClick = (e, { name }) => setActiveItem(name);
-  //   useEffect(() => {
-  //     console.log(pathname);
-  //   }, [pathname]);
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
+
+  function toggle() {
+    setIsOpen(!isOpen);
+  }
 
   return (
-    <div>
-      <NavLink to="/">Home</NavLink>
-
-      <NavLink to="/projects">Projects</NavLink>
-    </div>
+    <>
+      {isDesktop ? (
+        <div style={{ width: 200, position: "fixed", zIndex: 11 }}>
+          <Navbar color="faded" light>
+            {/* <NavbarToggler
+              onClick={toggle}
+              className="mr-2"
+              style={{ paddingLeft: 0 }}
+            /> */}
+            <Collapse isOpen={isOpen} navbar>
+              <Nav navbar>
+                <NavItem>
+                  <NavLink to="/">Home</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink to="/projects">Projects</NavLink>
+                </NavItem>
+              </Nav>
+            </Collapse>
+          </Navbar>
+        </div>
+      ) : (
+        <div style={{ zIndex: 11, position: "fixed" }}>
+          <Navbar color="faded" light>
+            <Nav>
+              <NavItem style={{ paddingRight: 20 }}>
+                <NavLink to="/">Home</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink to="/projects">Projects</NavLink>
+              </NavItem>
+            </Nav>
+          </Navbar>
+        </div>
+      )}
+    </>
   );
 }
 

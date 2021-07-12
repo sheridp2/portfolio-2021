@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     width: "100%",
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("md")]: {
       position: "relative",
       top: "50px",
     },
@@ -67,14 +67,15 @@ function Main(props) {
                 <Grid container>
                   <Grid
                     item
-                    sm={6}
+                    md={5}
+                    sm={12}
                     className={classes.meText}
                     style={{ zIndex: 10 }}
                   >
                     <h1 className={classes.mainText}>Patrick Sheridan</h1>
                     <p className={classes.secondaryText}>Frontend Developer</p>
                     <Grid container spacing={4}>
-                      <Grid item md={1} xs={2}>
+                      <Grid item>
                         <a
                           href="https://github.com/sheridp2"
                           target="_blank"
@@ -104,7 +105,7 @@ function Main(props) {
                           </UncontrolledTooltip>
                         </a>
                       </Grid>
-                      <Grid item md={1} xs={2}>
+                      <Grid item>
                         <a
                           href="https://www.linkedin.com/in/patrick-sheridan/"
                           target="_blank"
@@ -135,7 +136,7 @@ function Main(props) {
                           </div>
                         </a>
                       </Grid>
-                      <Grid item md={1} xs={2}>
+                      <Grid item>
                         <a
                           href="mailto:sheridp2@gmail.com"
                           target="_blank"
@@ -167,7 +168,7 @@ function Main(props) {
                       </Grid>
                     </Grid>
                   </Grid>
-                  <Grid item sm={6} className={classes.lottieImage}>
+                  <Grid item md={7} sm={12} className={classes.lottieImage}>
                     <LottieAnimate animationData={worker} />
                   </Grid>
                 </Grid>

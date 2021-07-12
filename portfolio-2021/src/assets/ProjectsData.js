@@ -24,10 +24,6 @@ const ProjectsData = [
         skillName: "NodeJS",
         fontAwesomeClassname: "logos:nodejs-icon",
       },
-      {
-        skillName: "GraphQL",
-        fontAwesomeClassname: "vscode-icons:file-type-graphql",
-      },
     ],
     featured: true,
   },

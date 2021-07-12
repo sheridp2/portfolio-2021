@@ -24,6 +24,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+    paddingLeft: 12,
+    paddingRight: 12,
     [theme.breakpoints.down("xs")]: {
       position: "relative",
       top: "-50px",
@@ -50,7 +52,7 @@ function Projects() {
   }
 
   return (
-    <div className={classes.root}>
+    <div>
       <div className="position-relative">
         <section
           className="section section-lg section-shaped pb-250"
@@ -65,59 +67,52 @@ function Projects() {
             <span />
             <span />
           </div>
-          <Container>
+          <Container style={{ paddingLeft: 0, paddingRight: 0 }}>
             <Fade top duration={1000} distance="40px">
-              <div>
-                <Grid container className={classes.mainContainer}>
-                  <Grid item sm={6}>
-                    <LottieAnimate
-                      animationData={developement}
-                      style={{
-                        width: "100%",
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                      }}
-                    />
-                  </Grid>
-                  <Grid item sm={6} className={classes.meText}>
-                    <h1 className={classes.mainText}>Projects</h1>
-                    <br />
-                    <Dropdown
-                      direction="down"
-                      isOpen={dropdownOpen}
-                      toggle={toggle}
-                      style={{ maxWidth: 100 }}
-                    >
-                      <DropdownToggle caret color="secondary">
-                        Project Filter
-                      </DropdownToggle>
-
-                      <DropdownMenu aria-labelledby="dropdownMenuButton">
-                        <DropdownItem
-                          onClick={(e) => workPersonalFilter(e)}
-                          value="All Projects"
-                        >
-                          All Projects
-                        </DropdownItem>
-                        <DropdownItem
-                          onClick={(e) => workPersonalFilter(e)}
-                          value="Professional"
-                        >
-                          Professional
-                        </DropdownItem>
-
-                        <DropdownItem
-                          onClick={(e) => workPersonalFilter(e)}
-                          value="Personal"
-                        >
-                          Personal
-                        </DropdownItem>
-                      </DropdownMenu>
-                    </Dropdown>
-                  </Grid>
+              <Grid container className={classes.mainContainer}>
+                <Grid item md={7} sm={12}>
+                  <LottieAnimate
+                    animationData={developement}
+                    style={{ width: "100%" }}
+                  />
                 </Grid>
-              </div>
+                <Grid item md={5} sm={12} className={classes.meText}>
+                  <h1 className={classes.mainText}>Projects</h1>
+                  <br />
+                  <Dropdown
+                    direction="down"
+                    isOpen={dropdownOpen}
+                    toggle={toggle}
+                    style={{ maxWidth: 100, zIndex: 11 }}
+                  >
+                    <DropdownToggle caret color="secondary">
+                      Project Filter
+                    </DropdownToggle>
+
+                    <DropdownMenu aria-labelledby="dropdownMenuButton">
+                      <DropdownItem
+                        onClick={(e) => workPersonalFilter(e)}
+                        value="All Projects"
+                      >
+                        All Projects
+                      </DropdownItem>
+                      <DropdownItem
+                        onClick={(e) => workPersonalFilter(e)}
+                        value="Professional"
+                      >
+                        Professional
+                      </DropdownItem>
+
+                      <DropdownItem
+                        onClick={(e) => workPersonalFilter(e)}
+                        value="Personal"
+                      >
+                        Personal
+                      </DropdownItem>
+                    </DropdownMenu>
+                  </Dropdown>
+                </Grid>
+              </Grid>
             </Fade>
           </Container>
           <div className="separator separator-bottom separator-skew">
