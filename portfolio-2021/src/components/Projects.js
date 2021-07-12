@@ -70,7 +70,15 @@ function Projects() {
               <div>
                 <Grid container className={classes.mainContainer}>
                   <Grid item sm={6}>
-                    <LottieAnimate animationData={developement} />
+                    <LottieAnimate
+                      animationData={developement}
+                      style={{
+                        width: "100%",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                      }}
+                    />
                   </Grid>
                   <Grid item sm={6} className={classes.meText}>
                     <h1 className={classes.mainText}>Projects</h1>
