@@ -58,7 +58,7 @@ function AboutSkills() {
   return (
     <div className={classes.returnedTech}>
       <Container>
-        <Grid container>
+        <Grid container bottom duration={1000} distance="40px">
           <Grid item>
             <h1>Main Tech Stacks</h1>
             <Grid container spacing={2}>
@@ -67,7 +67,7 @@ function AboutSkills() {
           </Grid>
         </Grid>
         <br />
-        <Grid container>
+        <Grid container bottom duration={1000} distance="40px">
           <h1>About me</h1>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
