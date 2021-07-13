@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { UncontrolledTooltip } from "reactstrap";
+import { Fade } from "react-reveal";
 
 import TechData from "../assets/TechData";
 
@@ -17,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
       top: "-110px",
     },
     [theme.breakpoints.down("xs")]: {
-      top: "-150px",
+      top: "-160px",
     },
   },
 }));
@@ -58,36 +59,41 @@ function AboutSkills() {
   return (
     <div className={classes.returnedTech}>
       <Container>
-        <Grid container bottom duration={1000} distance="40px">
-          <Grid item>
-            <h1>Main Tech Stacks</h1>
-            <Grid container spacing={2}>
-              {allTech}
+        <Fade duration={1000} distance="40px" bottom>
+          <Grid container bottom>
+            <Grid item>
+              <h1>Main Tech Stacks</h1>
+              <Grid container spacing={2}>
+                {allTech}
+              </Grid>
             </Grid>
           </Grid>
-        </Grid>
+        </Fade>
         <br />
-        <Grid container bottom duration={1000} distance="40px">
-          <h1>About me</h1>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
-          <ul>
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-            <li>Aliquam tincidunt mauris eu risus.</li>
-            <li>Vestibulum auctor dapibus neque.</li>
-            <li>Nunc dignissim risus id metus.</li>
-            <li>Cras ornare tristique elit.</li>
-          </ul>
-        </Grid>
+        <Fade duration={1000} distance="40px" bottom>
+          <Grid container>
+            <h1>About me</h1>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
+            </p>
+            <ul>
+              <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+              <li>Aliquam tincidunt mauris eu risus.</li>
+              <li>Vestibulum auctor dapibus neque.</li>
+              <li>Nunc dignissim risus id metus.</li>
+              <li>Cras ornare tristique elit.</li>
+            </ul>
+          </Grid>
+        </Fade>
       </Container>
     </div>
   );

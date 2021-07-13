@@ -188,7 +188,7 @@ function Main(props) {
             </svg>
           </div>
         </section>
-        <Fade bottom duration={1000} distance="40px">
+        <Fade>
           <About />
         </Fade>
       </div>
