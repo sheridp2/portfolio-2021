@@ -5,7 +5,7 @@ import { UncontrolledTooltip } from "reactstrap";
 
 import About from "./About";
 // import selfPic from "../assets/IMG_7976.jpg";
-import worker from "../assets/lottie/64381-work.json";
+import worker from "../assets/lottie/patrick-dev.json";
 import { Fade } from "react-reveal";
 
 import LottieAnimate from "./LottieAnimate";
