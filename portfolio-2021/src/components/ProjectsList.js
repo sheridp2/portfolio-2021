@@ -19,24 +19,42 @@ const useStyles = makeStyles((theme) => ({
       top: "-160px",
     },
   },
+  projectCard: {
+    "&:hover": {
+      backgroundColor: "black",
+    },
+  },
 }));
 
 function ProjectList(props) {
   const [diplayedProjects, setDisplayedProjects] = useState(projectsData);
   useEffect(() => {
     const tempArray = [];
+    const nonFeatured = [];
     projectsData.forEach((project) => {
       if (props.filter === "Professional" && project.company !== "Personal") {
-        tempArray.push(project);
+        if (project.featured === false) {
+          nonFeatured.push(project);
+        } else {
+          tempArray.push(project);
+        }
       }
       if (props.filter === "Personal" && project.company === "Personal") {
-        tempArray.push(project);
+        if (project.featured === false) {
+          nonFeatured.push(project);
+        } else {
+          tempArray.push(project);
+        }
       }
       if (props.filter === "All Projects") {
-        tempArray.push(project);
+        if (project.featured === false) {
+          nonFeatured.push(project);
+        } else {
+          tempArray.push(project);
+        }
       }
     });
-    setDisplayedProjects(tempArray);
+    setDisplayedProjects(tempArray.concat(nonFeatured));
   }, [props.filter]);
 
   const classes = useStyles();
@@ -54,17 +72,23 @@ function ProjectList(props) {
             <Container className="card shadow" style={{ padding: 15 }}>
               <Grid container spacing={2}>
                 <Grid item sm={5}>
-                  <img
-                    src={project.image}
-                    style={{
-                      width: "100%",
-                      border: "1px solid black",
-                      borderRadius: "5px",
-                    }}
-                  />
+                  <a href={project.url} target="_blank" rel="noopener">
+                    <img
+                      src={project.image}
+                      style={{
+                        width: "100%",
+                        border: "1px solid black",
+                        borderRadius: "5px",
+                      }}
+                    />
+                  </a>
                 </Grid>
                 <Grid item sm={7}>
-                  <h2>{project.name}</h2>
+                  <h2 style={{ fontWeight: "bold" }}>{project.name}</h2>
+                  <h5>
+                    <Badge color="warning">{project.company}</Badge>
+                  </h5>
+
                   <p>{project.description}</p>
                   <Grid container spacing={1}>
                     {project.technolgies.map((tech) => {
