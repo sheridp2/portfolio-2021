@@ -60,9 +60,9 @@ function AboutSkills() {
     <div className={classes.returnedTech}>
       <Container>
         <Fade duration={1000} distance="40px" bottom>
-          <Grid container bottom>
+          <Grid container>
             <Grid item>
-              <h1>Main Tech Stacks</h1>
+              <h1>Tech Stacks</h1>
               <Grid container spacing={2}>
                 {allTech}
               </Grid>

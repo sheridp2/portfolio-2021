@@ -1,9 +1,8 @@
 // import Background from "./components/Background";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Main from "./components/Main";
 import VerticalNav from "./components/VerticalNav";
 import Projects from "./components/Projects";
-
-import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
   return (

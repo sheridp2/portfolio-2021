@@ -32,9 +32,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   mainContainer: {
+    [theme.breakpoints.down("sm")]: {
+      position: "relative",
+    },
     [theme.breakpoints.down("xs")]: {
       position: "relative",
-      top: "-50px",
+      top: "-30px",
     },
   },
 }));
@@ -56,7 +59,7 @@ function Projects() {
       <div className="position-relative">
         <section
           className="section section-lg section-shaped pb-250"
-          style={{ paddingTop: 0 }}
+          style={{ paddingTop: 40 }}
         >
           <div className="shape shape-style-1 bg-gradient-green">
             <span />

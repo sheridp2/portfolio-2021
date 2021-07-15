@@ -10,10 +10,10 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     top: "-250px",
     [theme.breakpoints.down("md")]: {
-      top: "-150px",
+      top: "-200px",
     },
     [theme.breakpoints.down("sm")]: {
-      top: "-120px",
+      top: "-80px",
     },
     [theme.breakpoints.down("xs")]: {
       top: "-160px",
