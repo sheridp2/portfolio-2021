@@ -17,6 +17,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import CodeIcon from "@material-ui/icons/Code";
 import Typography from "@material-ui/core/Typography";
+import GetAppIcon from "@material-ui/icons/GetApp";
 
 import { NavLink } from "react-router-dom";
 
@@ -170,6 +171,23 @@ export default function ResponsiveDrawer() {
                     style={{ fontSize: 24, color: "#5e72e4" }}
                   >
                     Projects
+                  </Typography>
+                }
+              />
+            </ListItem>
+          </NavLink>
+          <NavLink to="/resume" onClick={handleDrawerClose}>
+            <ListItem button>
+              <ListItemIcon>
+                <GetAppIcon style={{ height: 30, width: 30 }} />
+              </ListItemIcon>
+              <ListItemText
+                primary={
+                  <Typography
+                    variant="h6"
+                    style={{ fontSize: 24, color: "#5e72e4" }}
+                  >
+                    Resume
                   </Typography>
                 }
               />

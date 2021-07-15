@@ -9,25 +9,33 @@ import TechData from "../assets/TechData";
 const useStyles = makeStyles((theme) => ({
   returnedTech: {
     position: "relative",
-    top: "-220px",
+    top: "-280px",
 
     [theme.breakpoints.down("md")]: {
       top: "-170px",
     },
     [theme.breakpoints.down("sm")]: {
-      top: "-110px",
+      top: "-90px",
     },
     [theme.breakpoints.down("xs")]: {
-      top: "-160px",
+      top: "-140px",
     },
   },
 }));
-function AboutSkills() {
+function Skills() {
   const classes = useStyles();
   let allTech = TechData.map((tech) => {
     return (
       <>
-        <Grid key={tech.skillName} item sm={1} style={{ margin: "0px 14px" }}>
+        <Grid
+          key={tech.skillName}
+          item
+          lg={2}
+          md={2}
+          sm={3}
+          xs={4}
+          // style={{ margin: "6px 0px" }}
+        >
           <div
             className="icon icon-xl icon-shape shadow rounded-circle mb-4 "
             style={{
@@ -62,36 +70,11 @@ function AboutSkills() {
         <Fade duration={1000} distance="40px" bottom>
           <Grid container>
             <Grid item>
-              <h1>Tech Stacks</h1>
-              <Grid container spacing={2}>
-                {allTech}
-              </Grid>
+              <h1 style={{ color: "white", fontWeight: "bold" }}>
+                Tech Stacks
+              </h1>
+              <Grid container>{allTech}</Grid>
             </Grid>
-          </Grid>
-        </Fade>
-        <br />
-        <Fade duration={1000} distance="40px" bottom>
-          <Grid container>
-            <h1>About me</h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
-            <ul>
-              <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-              <li>Aliquam tincidunt mauris eu risus.</li>
-              <li>Vestibulum auctor dapibus neque.</li>
-              <li>Nunc dignissim risus id metus.</li>
-              <li>Cras ornare tristique elit.</li>
-            </ul>
           </Grid>
         </Fade>
       </Container>
@@ -99,4 +82,4 @@ function AboutSkills() {
   );
 }
 
-export default AboutSkills;
+export default Skills;

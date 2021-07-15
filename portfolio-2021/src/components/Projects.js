@@ -18,7 +18,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   mainText: {
-    fontSize: "50px",
+    fontSize: "65px",
+    color: "white",
+    fontWeight: "bold",
   },
   meText: {
     display: "flex",
@@ -26,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     paddingLeft: 12,
     paddingRight: 12,
+
     [theme.breakpoints.down("xs")]: {
       position: "relative",
       top: "-50px",
@@ -81,12 +84,12 @@ function Projects() {
                 </Grid>
                 <Grid item md={5} sm={12} className={classes.meText}>
                   <h1 className={classes.mainText}>Projects</h1>
-                  <br />
+
                   <Dropdown
                     direction="down"
                     isOpen={dropdownOpen}
                     toggle={toggle}
-                    style={{ maxWidth: 100, zIndex: 11 }}
+                    style={{ maxWidth: 100, zIndex: 11, paddingTop: 8 }}
                   >
                     <DropdownToggle caret color="secondary">
                       Project Filter

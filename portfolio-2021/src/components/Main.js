@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Container, Grid } from "@material-ui/core";
 import { UncontrolledTooltip } from "reactstrap";
 
-import About from "./About";
+import Skills from "./Skills";
 import worker from "../assets/lottie/patrick-dev.json";
 import { Fade } from "react-reveal";
 
@@ -14,10 +14,20 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   mainText: {
-    fontSize: "55px",
+    fontSize: 75,
+    color: "white",
+    fontWeight: "bold",
+    marginBottom: 0,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 60,
+    },
   },
   secondaryText: {
-    fontSize: "30px",
+    fontSize: 40,
+    color: "white",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 30,
+    },
   },
 
   meText: {
@@ -60,114 +70,30 @@ function Main(props) {
             <span />
           </div>
 
-          <Container>
+          <Container maxWidth="lg" className={classes.mainContainer}>
             <Fade top duration={1000} distance="40px">
               <div>
                 <Grid container>
                   <Grid
                     item
-                    md={5}
+                    lg={7}
+                    md={6}
                     sm={12}
                     className={classes.meText}
                     style={{ zIndex: 10 }}
                   >
                     <h1 className={classes.mainText}>Patrick Sheridan</h1>
-                    <p className={classes.secondaryText}>Frontend Developer</p>
-                    <Grid container spacing={4}>
-                      <Grid item>
-                        <a
-                          href="https://github.com/sheridp2"
-                          target="_blank"
-                          rel="noopener"
-                        >
-                          <div
-                            className="icon icon-sm"
-                            style={{
-                              color: "#e8e3e3",
-                            }}
-                            id="github"
-                          >
-                            <span
-                              className="iconify"
-                              data-icon="logos:github-icon"
-                              data-inline="false"
-                              style={{ height: 35, width: 35 }}
-                            ></span>
-                          </div>
-                          <UncontrolledTooltip
-                            delay={0}
-                            placement="bottom"
-                            target="github"
-                            style={{ fontSize: 15 }}
-                          >
-                            Github: https://github.com/sheridp2
-                          </UncontrolledTooltip>
-                        </a>
-                      </Grid>
-                      <Grid item>
-                        <a
-                          href="https://www.linkedin.com/in/patrick-sheridan/"
-                          target="_blank"
-                          rel="noopener"
-                        >
-                          <div
-                            className="icon icon-sm"
-                            style={{
-                              color: "#e8e3e3",
-                            }}
-                            id="linkedin"
-                          >
-                            <span
-                              className="iconify"
-                              data-icon="logos:linkedin-icon"
-                              data-inline="false"
-                              style={{ height: 35, width: 35 }}
-                            ></span>
-                            <UncontrolledTooltip
-                              delay={0}
-                              placement="bottom"
-                              target="linkedin"
-                              style={{ fontSize: 15 }}
-                            >
-                              Linkedin:
-                              https://www.linkedin.com/in/patrick-sheridan/
-                            </UncontrolledTooltip>
-                          </div>
-                        </a>
-                      </Grid>
-                      <Grid item>
-                        <a
-                          href="mailto:sheridp2@gmail.com"
-                          target="_blank"
-                          rel="noopener"
-                        >
-                          <div
-                            className="icon icon-sm"
-                            style={{
-                              color: "#e8e3e3",
-                            }}
-                            id="gmail"
-                          >
-                            <span
-                              className="iconify"
-                              data-icon="logos:google-gmail"
-                              data-inline="false"
-                              style={{ height: 35, width: 35 }}
-                            ></span>
-                            <UncontrolledTooltip
-                              delay={0}
-                              placement="bottom"
-                              target="gmail"
-                              style={{ fontSize: 15 }}
-                            >
-                              Gmail: sheridp2@gmail.com
-                            </UncontrolledTooltip>
-                          </div>
-                        </a>
-                      </Grid>
-                    </Grid>
+                    <p className={classes.secondaryText}>Front End Developer</p>
+                    <p>Mission Statment</p>
                   </Grid>
-                  <Grid item md={7} sm={12} className={classes.lottieImage}>
+
+                  <Grid
+                    item
+                    lg={5}
+                    md={6}
+                    sm={12}
+                    className={classes.lottieImage}
+                  >
                     <LottieAnimate animationData={worker} />
                   </Grid>
                 </Grid>
@@ -188,7 +114,7 @@ function Main(props) {
           </div>
         </section>
         <Fade>
-          <About />
+          <Skills />
         </Fade>
       </div>
     </div>
