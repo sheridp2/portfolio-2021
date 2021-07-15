@@ -6,7 +6,7 @@ import nbaAssistImage from "./images/nbaAssist.png";
 
 const ProjectsData = [
   {
-    name: "Reacter",
+    name: "Reacter - Social Media App",
     image: reacterImage,
     description:
       "Social media app similar to Twitter. Built with React, GraphQL, MongoDB, Node, and Express (MERNG stack)",

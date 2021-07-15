@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Container, Grid } from "@material-ui/core";
 import projectsData from "../assets/ProjectsData";
 import { Fade } from "react-reveal";
-import { Badge } from "reactstrap";
+import { Badge, Button } from "reactstrap";
 
 const useStyles = makeStyles((theme) => ({
   returnedProjects: {
@@ -84,22 +84,59 @@ function ProjectList(props) {
                   </a>
                 </Grid>
                 <Grid item sm={7}>
-                  <h2 style={{ fontWeight: "bold" }}>{project.name}</h2>
-                  <h5>
-                    <Badge color="warning">{project.company}</Badge>
-                  </h5>
+                  <a href={project.url} target="_blank" rel="noopener">
+                    <h2 style={{ fontWeight: "bold" }}>{project.name}</h2>
+                  </a>
+                  <h4>
+                    <Badge color="success">{project.company}</Badge>
+                  </h4>
 
                   <p>{project.description}</p>
                   <Grid container spacing={1}>
                     {project.technolgies.map((tech) => {
                       return (
                         <Grid item key={tech.skillName}>
-                          <Badge color="primary" pill>
-                            {tech.skillName}
-                          </Badge>
+                          <h5>
+                            <Badge color="primary" pill>
+                              {tech.skillName}
+                            </Badge>
+                          </h5>
                         </Grid>
                       );
                     })}
+                  </Grid>
+
+                  <Grid container style={{ paddingTop: 15 }} spacing={2}>
+                    <Grid item>
+                      {project.frontendRepo !== "N/A" ? (
+                        <Button
+                          color="primary"
+                          href={project.frontendRepo}
+                          target="_blank"
+                          rel="noopener"
+                          outline
+                        >
+                          Frontend Repo
+                        </Button>
+                      ) : (
+                        <div></div>
+                      )}
+                    </Grid>
+                    <Grid item>
+                      {project.backendRepo !== "N/A" ? (
+                        <Button
+                          color="primary"
+                          href={project.backendRepo}
+                          target="_blank"
+                          rel="noopener"
+                          outline
+                        >
+                          Backend Repo
+                        </Button>
+                      ) : (
+                        <div></div>
+                      )}
+                    </Grid>
                   </Grid>
                 </Grid>
               </Grid>
