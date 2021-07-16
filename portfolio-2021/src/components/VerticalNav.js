@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { UncontrolledTooltip } from "reactstrap";
 
 import ResponsiveDrawer from "./ResponsiveDrawer";
-import GetAppIcon from "@material-ui/icons/GetApp";
 
 // reactstrap components
 import { Collapse, Navbar, Nav, NavItem, Button } from "reactstrap";
@@ -68,17 +68,175 @@ function VerticalNav() {
                   </NavLink>
                 </NavItem>
                 <NavItem style={{ marginRight: 0 }}>
-                  <a href="../assets/images/resume" download>
+                  <NavLink to="/resume">
                     <Button
                       color="primary"
                       size="lg"
                       style={{ width: "100%", marginBottom: 20, fontSize: 22 }}
                     >
-                      Resume&nbsp;
-                      <GetAppIcon />
+                      Resume
                     </Button>
-                  </a>
+                  </NavLink>
                 </NavItem>
+                <NavItem
+                  style={{
+                    color: "white",
+                    fontWeight: "bold",
+                    textAlign: "center",
+                    paddingTop: 20,
+                    fontSize: 20,
+                  }}
+                >
+                  Contact Info
+                </NavItem>
+                <NavItem style={{ marginRight: 0 }}>
+                  <Button
+                    id="github"
+                    size="lg"
+                    style={{ width: "100%", marginBottom: 20, fontSize: 22 }}
+                  >
+                    <a
+                      href="https://github.com/sheridp2"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <div
+                        className="icon icon-sm"
+                        style={{
+                          color: "#e8e3e3",
+                          display: "inline-block",
+                          marginRight: 14,
+                        }}
+                      >
+                        <span
+                          className="iconify"
+                          data-icon="logos:github-icon"
+                          data-inline="false"
+                          style={{
+                            height: 35,
+                            width: 35,
+                          }}
+                        ></span>
+                      </div>
+                      <span
+                        style={{
+                          color: "black",
+                          fontSize: 15,
+                        }}
+                      >
+                        Github
+                      </span>
+
+                      <UncontrolledTooltip
+                        delay={0}
+                        placement="right"
+                        target="github"
+                        style={{ fontSize: 15, width: 300 }}
+                      >
+                        Github: https://github.com/sheridp2
+                      </UncontrolledTooltip>
+                    </a>
+                  </Button>
+                </NavItem>
+                <NavItem style={{ marginRight: 0 }}>
+                  <Button
+                    id="linkedin"
+                    size="lg"
+                    style={{ width: "100%", marginBottom: 20, fontSize: 22 }}
+                  >
+                    <a
+                      href="https://www.linkedin.com/in/patrick-sheridan/"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <div
+                        className="icon icon-sm"
+                        style={{
+                          color: "#e8e3e3",
+                          display: "inline-block",
+                          marginRight: 14,
+                        }}
+                      >
+                        <span
+                          className="iconify"
+                          data-icon="logos:linkedin-icon"
+                          data-inline="false"
+                          style={{
+                            height: 35,
+                            width: 35,
+                          }}
+                        ></span>
+                      </div>
+                      <span
+                        style={{
+                          color: "black",
+                          fontSize: 15,
+                        }}
+                      >
+                        Linkedin
+                      </span>
+
+                      <UncontrolledTooltip
+                        delay={0}
+                        placement="right"
+                        target="linkedin"
+                        style={{ fontSize: 15, width: 300 }}
+                      >
+                        LinkedIn: https://www.linkedin.com/in/patrick-sheridan/
+                      </UncontrolledTooltip>
+                    </a>
+                  </Button>
+                </NavItem>
+                <NavItem style={{ marginRight: 0 }}>
+                  <Button
+                    id="gmail"
+                    size="lg"
+                    style={{ width: "100%", marginBottom: 20, fontSize: 22 }}
+                  >
+                    <a
+                      href="mailto:sheridp2@gmail.com"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <div
+                        className="icon icon-sm"
+                        style={{
+                          color: "#e8e3e3",
+                          display: "inline-block",
+                          marginRight: 14,
+                        }}
+                      >
+                        <span
+                          className="iconify"
+                          data-icon="logos:google-gmail"
+                          data-inline="false"
+                          style={{
+                            height: 35,
+                            width: 35,
+                          }}
+                        ></span>
+                      </div>
+                      <span
+                        style={{
+                          color: "black",
+                          fontSize: 15,
+                        }}
+                      >
+                        Gmail
+                      </span>
+
+                      <UncontrolledTooltip
+                        delay={0}
+                        placement="right"
+                        target="gmail"
+                        style={{ fontSize: 15, width: 300 }}
+                      >
+                        Gmail: sheridp2@gmail.com
+                      </UncontrolledTooltip>
+                    </a>
+                  </Button>
+                </NavItem>
+
                 {/* <Grid container spacing={4}>
                   <Grid item>
                     <a
@@ -185,27 +343,6 @@ function VerticalNav() {
           }}
         >
           <ResponsiveDrawer />
-          {/* <Navbar color="faded" light>
-            <Nav>
-              <NavItem style={{ paddingRight: 20 }}>
-                <NavLink style={{ color: "rgba(255,255,255, 0.9)" }} to="/">
-                  <Button variant="contained" color="primary" size="large">
-                    Home
-                  </Button>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  style={{ color: "rgba(255,255,255, 0.9)" }}
-                  to="/projects"
-                >
-                  <Button variant="contained" color="primary" size="large">
-                    Projects
-                  </Button>
-                </NavLink>
-              </NavItem>
-            </Nav>
-          </Navbar> */}
         </div>
       )}
     </>

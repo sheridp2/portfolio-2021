@@ -72,7 +72,7 @@ function ProjectList(props) {
             <Container className="card shadow" style={{ padding: 15 }}>
               <Grid container spacing={2}>
                 <Grid item sm={5}>
-                  <a href={project.url} target="_blank" rel="noopener">
+                  <a href={project.url} target="_blank" rel="noreferrer">
                     <img
                       src={project.image}
                       style={{
@@ -84,7 +84,7 @@ function ProjectList(props) {
                   </a>
                 </Grid>
                 <Grid item sm={7}>
-                  <a href={project.url} target="_blank" rel="noopener">
+                  <a href={project.url} target="_blank" rel="noreferrer">
                     <h2 style={{ fontWeight: "bold" }}>{project.name}</h2>
                   </a>
                   <h4>
@@ -113,7 +113,7 @@ function ProjectList(props) {
                           color="primary"
                           href={project.frontendRepo}
                           target="_blank"
-                          rel="noopener"
+                          rel="noreferrer"
                           outline
                         >
                           Frontend Repo
@@ -128,7 +128,7 @@ function ProjectList(props) {
                           color="primary"
                           href={project.backendRepo}
                           target="_blank"
-                          rel="noopener"
+                          rel="noreferrer"
                           outline
                         >
                           Backend Repo

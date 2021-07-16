@@ -30,17 +30,17 @@ function Skills() {
         <Grid
           key={tech.skillName}
           item
-          lg={2}
-          md={2}
-          sm={3}
-          xs={4}
-          // style={{ margin: "6px 0px" }}
+          lg={1}
+          md={1}
+          sm={2}
+          xs={2}
+          style={{ marginRight: "32px" }}
         >
           <div
             className="icon icon-xl icon-shape shadow rounded-circle mb-4 "
             style={{
               color: "#e8e3e3",
-              backgroundColor: "rgba(255, 255, 255, 0.7)",
+              backgroundColor: "rgba(255, 255, 255, 0.9)",
             }}
             id={tech.skillName}
           >
@@ -71,7 +71,7 @@ function Skills() {
           <Grid container>
             <Grid item>
               <h1 style={{ color: "white", fontWeight: "bold" }}>
-                Tech Stacks
+                What I work with
               </h1>
               <Grid container>{allTech}</Grid>
             </Grid>

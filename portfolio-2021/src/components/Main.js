@@ -1,20 +1,23 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Container, Grid } from "@material-ui/core";
-import { UncontrolledTooltip } from "reactstrap";
+
+import { Fade } from "react-reveal";
 
 import Skills from "./Skills";
+import About from "./About";
 import worker from "../assets/lottie/patrick-dev.json";
-import { Fade } from "react-reveal";
 
 import LottieAnimate from "./LottieAnimate";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    fontFamily: "Open Sans, sans-serif",
+    color: "#525f7f",
   },
   mainText: {
-    fontSize: 75,
+    fontSize: 65,
     color: "white",
     fontWeight: "bold",
     marginBottom: 0,
@@ -23,11 +26,16 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   secondaryText: {
-    fontSize: 40,
+    fontSize: 35,
+    fontWeight: "bold",
     color: "white",
     [theme.breakpoints.down("xs")]: {
       fontSize: 30,
     },
+  },
+  missionText: {
+    fontSize: 24,
+    fontWeight: "bold",
   },
 
   meText: {
@@ -76,7 +84,7 @@ function Main(props) {
                 <Grid container>
                   <Grid
                     item
-                    lg={7}
+                    lg={6}
                     md={6}
                     sm={12}
                     className={classes.meText}
@@ -84,12 +92,14 @@ function Main(props) {
                   >
                     <h1 className={classes.mainText}>Patrick Sheridan</h1>
                     <p className={classes.secondaryText}>Front End Developer</p>
-                    <p>Mission Statment</p>
+                    <p className={classes.missionText}>
+                      Let's change the world, one line of code at a time
+                    </p>
                   </Grid>
 
                   <Grid
                     item
-                    lg={5}
+                    lg={6}
                     md={6}
                     sm={12}
                     className={classes.lottieImage}
@@ -113,9 +123,12 @@ function Main(props) {
             </svg>
           </div>
         </section>
-        <Fade>
+        <section>
           <Skills />
-        </Fade>
+        </section>
+        <section>
+          <About />
+        </section>
       </div>
     </div>
   );

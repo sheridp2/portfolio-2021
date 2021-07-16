@@ -46,7 +46,7 @@ const ProjectsData = [
     company: "Personal",
     technolgies: [
       { skillName: "React", fontAwesomeClassname: "logos:react" },
-      ,
+
       { skillName: "Redux", fontAwesomeClassname: "" },
     ],
     featured: false,
@@ -61,9 +61,9 @@ const ProjectsData = [
     company: "ISoftStone",
     technolgies: [
       { skillName: "Accessibility", fontAwesomeClassname: "" },
-      ,
+
       { skillName: "React", fontAwesomeClassname: "logos:react" },
-      ,
+
       {
         skillName: "NodeJS",
         fontAwesomeClassname: "logos:nodejs-icon",
@@ -85,9 +85,9 @@ const ProjectsData = [
     company: "ISoftStone",
     technolgies: [
       { skillName: "Accessibility", fontAwesomeClassname: "" },
-      ,
+
       { skillName: "React", fontAwesomeClassname: "logos:react" },
-      ,
+
       {
         skillName: "NodeJS",
         fontAwesomeClassname: "logos:nodejs-icon",
@@ -112,9 +112,8 @@ const ProjectsData = [
     url: "https://nba-assist.vercel.app/",
     company: "Personal",
     technolgies: [
-      ,
       { skillName: "React", fontAwesomeClassname: "logos:react" },
-      ,
+
       {
         skillName: "NodeJS",
         fontAwesomeClassname: "logos:nodejs-icon",
