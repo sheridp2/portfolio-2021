@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { UncontrolledTooltip } from "reactstrap";
 
 import ResponsiveDrawer from "./ResponsiveDrawer";
+import { Container, Grid } from "@material-ui/core";
 
 // reactstrap components
-import { Collapse, Navbar, Nav, NavItem, Button } from "reactstrap";
+import {
+  UncontrolledTooltip,
+  Collapse,
+  Navbar,
+  Nav,
+  NavItem,
+  Button,
+} from "reactstrap";
 
 function VerticalNav() {
   const [isOpen, setIsOpen] = useState(true);
@@ -78,269 +85,153 @@ function VerticalNav() {
                     </Button>
                   </NavLink>
                 </NavItem>
-                <NavItem style={{ marginRight: 0 }}>
-                  <NavLink to="/">
-                    <Button
-                      color="secondary"
-                      size="lg"
-                      style={{ width: "100%", marginBottom: 20, fontSize: 22 }}
-                    >
-                      Pat Facts
-                    </Button>
-                  </NavLink>
+
+                <NavItem>
+                  <hr className="my-2" />
                 </NavItem>
                 <NavItem
                   style={{
                     color: "white",
                     fontWeight: "bold",
                     textAlign: "center",
-                    paddingTop: 20,
-                    fontSize: 20,
+                    paddingTop: 10,
+                    fontSize: 24,
+                    textShadow:
+                      "1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000",
                   }}
                 >
                   Contact Me
                 </NavItem>
                 <NavItem style={{ marginRight: 0 }}>
-                  <Button
-                    id="github"
+                  <div
                     size="lg"
-                    style={{ width: "100%", marginBottom: 20, fontSize: 22 }}
+                    style={{
+                      width: "100%",
+                      marginTop: 10,
+                      fontSize: 22,
+                      textAlign: "center",
+                    }}
                   >
-                    <a
-                      href="https://github.com/sheridp2"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <div
-                        className="icon icon-sm"
-                        style={{
-                          color: "#e8e3e3",
-                          display: "inline-block",
-                          marginRight: 14,
-                        }}
-                      >
-                        <span
-                          className="iconify"
-                          data-icon="logos:github-icon"
-                          data-inline="false"
-                          style={{
-                            height: 35,
-                            width: 35,
-                          }}
-                        ></span>
-                      </div>
-                      <span
-                        style={{
-                          color: "black",
-                          fontSize: 15,
-                        }}
-                      >
-                        Github
-                      </span>
-
-                      <UncontrolledTooltip
-                        delay={0}
-                        placement="right"
-                        target="github"
-                        style={{ fontSize: 15, width: 300 }}
-                      >
-                        Github: https://github.com/sheridp2
-                      </UncontrolledTooltip>
-                    </a>
-                  </Button>
-                </NavItem>
-                <NavItem style={{ marginRight: 0 }}>
-                  <Button
-                    id="linkedin"
-                    size="lg"
-                    style={{ width: "100%", marginBottom: 20, fontSize: 22 }}
-                  >
-                    <a
-                      href="https://www.linkedin.com/in/patrick-sheridan/"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <div
-                        className="icon icon-sm"
-                        style={{
-                          color: "#e8e3e3",
-                          display: "inline-block",
-                          marginRight: 14,
-                        }}
-                      >
-                        <span
-                          className="iconify"
-                          data-icon="logos:linkedin-icon"
-                          data-inline="false"
-                          style={{
-                            height: 35,
-                            width: 35,
-                          }}
-                        ></span>
-                      </div>
-                      <span
-                        style={{
-                          color: "black",
-                          fontSize: 15,
-                        }}
-                      >
-                        Linkedin
-                      </span>
-
-                      <UncontrolledTooltip
-                        delay={0}
-                        placement="right"
-                        target="linkedin"
-                        style={{ fontSize: 15, width: 300 }}
-                      >
-                        LinkedIn: https://www.linkedin.com/in/patrick-sheridan/
-                      </UncontrolledTooltip>
-                    </a>
-                  </Button>
-                </NavItem>
-                <NavItem style={{ marginRight: 0 }}>
-                  <Button
-                    id="gmail"
-                    size="lg"
-                    style={{ width: "100%", marginBottom: 20, fontSize: 22 }}
-                  >
-                    <a
-                      href="mailto:sheridp2@gmail.com"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <div
-                        className="icon icon-sm"
-                        style={{
-                          color: "#e8e3e3",
-                          display: "inline-block",
-                          marginRight: 14,
-                        }}
-                      >
-                        <span
-                          className="iconify"
-                          data-icon="logos:google-gmail"
-                          data-inline="false"
-                          style={{
-                            height: 35,
-                            width: 35,
-                          }}
-                        ></span>
-                      </div>
-                      <span
-                        style={{
-                          color: "black",
-                          fontSize: 15,
-                        }}
-                      >
-                        Gmail
-                      </span>
-
-                      <UncontrolledTooltip
-                        delay={0}
-                        placement="right"
-                        target="gmail"
-                        style={{ fontSize: 15, width: 300 }}
-                      >
-                        Gmail: sheridp2@gmail.com
-                      </UncontrolledTooltip>
-                    </a>
-                  </Button>
-                </NavItem>
-
-                {/* <Grid container spacing={4}>
-                  <Grid item>
-                    <a
-                      href="https://github.com/sheridp2"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <div
-                        className="icon icon-sm"
-                        style={{
-                          color: "#e8e3e3",
-                        }}
-                        id="github"
-                      >
-                        <span
-                          className="iconify"
-                          data-icon="logos:github-icon"
-                          data-inline="false"
-                          style={{ height: 35, width: 35 }}
-                        ></span>
-                      </div>
-                      <UncontrolledTooltip
-                        delay={0}
-                        placement="bottom"
-                        target="github"
-                        style={{ fontSize: 15 }}
-                      >
-                        Github: https://github.com/sheridp2
-                      </UncontrolledTooltip>
-                    </a>
-                  </Grid>
-                  <Grid item>
-                    <a
-                      href="https://www.linkedin.com/in/patrick-sheridan/"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <div
-                        className="icon icon-sm"
-                        style={{
-                          color: "#e8e3e3",
-                        }}
-                        id="linkedin"
-                      >
-                        <span
-                          className="iconify"
-                          data-icon="logos:linkedin-icon"
-                          data-inline="false"
-                          style={{ height: 35, width: 35 }}
-                        ></span>
-                        <UncontrolledTooltip
-                          delay={0}
-                          placement="bottom"
-                          target="linkedin"
-                          style={{ fontSize: 15 }}
+                    <Grid container>
+                      <Grid item sm={4}>
+                        <a
+                          id="gmail"
+                          href="mailto:sheridp2@gmail.com"
+                          target="_blank"
+                          rel="noopener"
                         >
-                          Linkedin:
-                          https://www.linkedin.com/in/patrick-sheridan/
-                        </UncontrolledTooltip>
-                      </div>
-                    </a>
-                  </Grid>
-                  <Grid item>
-                    <a
-                      href="mailto:sheridp2@gmail.com"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <div
-                        className="icon icon-sm"
-                        style={{
-                          color: "#e8e3e3",
-                        }}
-                        id="gmail"
-                      >
-                        <span
-                          className="iconify"
-                          data-icon="logos:google-gmail"
-                          data-inline="false"
-                          style={{ height: 35, width: 35 }}
-                        ></span>
-                        <UncontrolledTooltip
-                          delay={0}
-                          placement="bottom"
-                          target="gmail"
-                          style={{ fontSize: 15 }}
+                          <div
+                            className="icon icon-sm"
+                            style={{
+                              color: "#e8e3e3",
+                              display: "inline-block",
+                              marginRight: 14,
+                            }}
+                          >
+                            <span
+                              className="iconify"
+                              data-icon="logos:google-gmail"
+                              data-inline="false"
+                              style={{
+                                height: 35,
+                                width: 35,
+                              }}
+                            ></span>
+                          </div>
+
+                          <UncontrolledTooltip
+                            delay={0}
+                            placement="bottom"
+                            target="gmail"
+                            style={{ fontSize: 15, width: 300 }}
+                          >
+                            Gmail: sheridp2@gmail.com
+                          </UncontrolledTooltip>
+                        </a>
+                      </Grid>
+                      <Grid item sm={4}>
+                        <a
+                          href="https://github.com/sheridp2"
+                          target="_blank"
+                          rel="noopener"
+                          id="github"
                         >
-                          Gmail: sheridp2@gmail.com
-                        </UncontrolledTooltip>
-                      </div>
-                    </a>
-                  </Grid>
-                </Grid> */}
+                          <div
+                            className="icon icon-sm"
+                            style={{
+                              color: "#e8e3e3",
+                              display: "inline-block",
+                              marginRight: 14,
+                            }}
+                          >
+                            <span
+                              className="iconify"
+                              data-icon="logos:github-icon"
+                              data-inline="false"
+                              style={{
+                                height: 35,
+                                width: 35,
+                              }}
+                            ></span>
+                          </div>
+
+                          <UncontrolledTooltip
+                            delay={0}
+                            placement="bottom"
+                            target="github"
+                            style={{ fontSize: 15, width: 300 }}
+                          >
+                            Github: https://github.com/sheridp2
+                          </UncontrolledTooltip>
+                        </a>
+                      </Grid>
+                      <Grid item sm={4}>
+                        <a
+                          href="https://www.linkedin.com/in/patrick-sheridan/"
+                          target="_blank"
+                          rel="noopener"
+                          id="linkedin"
+                        >
+                          <div
+                            className="icon icon-sm"
+                            style={{
+                              color: "#e8e3e3",
+                              display: "inline-block",
+                              marginRight: 14,
+                            }}
+                          >
+                            <span
+                              className="iconify"
+                              data-icon="logos:linkedin-icon"
+                              data-inline="false"
+                              style={{
+                                height: 35,
+                                width: 35,
+                              }}
+                            ></span>
+                          </div>
+
+                          <UncontrolledTooltip
+                            delay={0}
+                            placement="bottom"
+                            target="linkedin"
+                            style={{ fontSize: 15, width: 300 }}
+                          >
+                            LinkedIn:
+                            https://www.linkedin.com/in/patrick-sheridan/
+                          </UncontrolledTooltip>
+                        </a>
+                      </Grid>
+                    </Grid>
+                  </div>
+                </NavItem>
+
+                <NavItem style={{ marginRight: 0 }}>
+                  <div
+                    size="lg"
+                    style={{ width: "100%", marginBottom: 20, fontSize: 22 }}
+                  ></div>
+                </NavItem>
               </Nav>
             </Collapse>
           </Navbar>

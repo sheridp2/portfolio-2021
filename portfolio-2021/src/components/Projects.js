@@ -58,7 +58,7 @@ function Projects() {
   }
 
   return (
-    <div>
+    <div className={classes.root}>
       <div className="position-relative">
         <section
           className="section section-lg section-shaped pb-250"

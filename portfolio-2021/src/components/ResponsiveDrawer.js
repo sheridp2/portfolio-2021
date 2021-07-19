@@ -193,6 +193,101 @@ export default function ResponsiveDrawer() {
               />
             </ListItem>
           </NavLink>
+          <NavLink to="">
+            <ListItem>
+              <div
+                className="icon icon-sm"
+                style={{
+                  color: "#e8e3e3",
+                  display: "inline-block",
+                  marginRight: 14,
+                }}
+              >
+                <span
+                  className="iconify"
+                  data-icon="logos:google-gmail"
+                  data-inline="false"
+                  style={{
+                    height: 35,
+                    width: 35,
+                  }}
+                ></span>
+              </div>
+
+              {/* <Grid item sm={4}>
+                  <a
+                    href="https://github.com/sheridp2"
+                    target="_blank"
+                    rel="noopener"
+                    id="github"
+                  >
+                    <div
+                      className="icon icon-sm"
+                      style={{
+                        color: "#e8e3e3",
+                        display: "inline-block",
+                        marginRight: 14,
+                      }}
+                    >
+                      <span
+                        className="iconify"
+                        data-icon="logos:github-icon"
+                        data-inline="false"
+                        style={{
+                          height: 35,
+                          width: 35,
+                        }}
+                      ></span>
+                    </div>
+
+                    <UncontrolledTooltip
+                      delay={0}
+                      placement="bottom"
+                      target="github"
+                      style={{ fontSize: 15, width: 300 }}
+                    >
+                      Github: https://github.com/sheridp2
+                    </UncontrolledTooltip>
+                  </a>
+                </Grid>
+                <Grid item sm={4}>
+                  <a
+                    href="https://www.linkedin.com/in/patrick-sheridan/"
+                    target="_blank"
+                    rel="noopener"
+                    id="linkedin"
+                  >
+                    <div
+                      className="icon icon-sm"
+                      style={{
+                        color: "#e8e3e3",
+                        display: "inline-block",
+                        marginRight: 14,
+                      }}
+                    >
+                      <span
+                        className="iconify"
+                        data-icon="logos:linkedin-icon"
+                        data-inline="false"
+                        style={{
+                          height: 35,
+                          width: 35,
+                        }}
+                      ></span>
+                    </div>
+
+                    <UncontrolledTooltip
+                      delay={0}
+                      placement="bottom"
+                      target="linkedin"
+                      style={{ fontSize: 15, width: 300 }}
+                    >
+                      LinkedIn: https://www.linkedin.com/in/patrick-sheridan/
+                    </UncontrolledTooltip>
+                  </a>
+                </Grid> */}
+            </ListItem>
+          </NavLink>
         </List>
       </Drawer>
     </div>

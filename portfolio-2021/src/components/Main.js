@@ -13,7 +13,7 @@ import LottieAnimate from "./LottieAnimate";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    fontFamily: "Open Sans, sans-serif",
+    // fontFamily: "Rubik, sans-serif",
     color: "#525f7f",
   },
   mainText: {

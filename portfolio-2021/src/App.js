@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div className="App">
+        <div className="App" style={{ fontFamily: "Rubik, sans-serif" }}>
           <VerticalNav />
           <Switch>
             <Route exact path="/" component={Main} />

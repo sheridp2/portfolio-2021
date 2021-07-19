@@ -26,41 +26,39 @@ function Skills() {
   const classes = useStyles();
   let allTech = TechData.map((tech) => {
     return (
-      <>
-        <Grid
-          key={tech.skillName}
-          item
-          lg={1}
-          md={1}
-          sm={2}
-          xs={2}
-          style={{ marginRight: "32px" }}
+      <Grid
+        key={tech.skillName}
+        item
+        lg={1}
+        md={1}
+        sm={2}
+        xs={2}
+        style={{ marginRight: "32px" }}
+      >
+        <div
+          className="icon icon-xl icon-shape shadow rounded-circle mb-4 "
+          style={{
+            color: "#e8e3e3",
+            backgroundColor: "rgba(255, 255, 255, 0.9)",
+          }}
+          id={tech.skillName}
         >
-          <div
-            className="icon icon-xl icon-shape shadow rounded-circle mb-4 "
-            style={{
-              color: "#e8e3e3",
-              backgroundColor: "rgba(255, 255, 255, 0.9)",
-            }}
-            id={tech.skillName}
-          >
-            <span
-              className="iconify"
-              data-icon={tech.fontAwesomeClassname}
-              data-inline="false"
-              style={{ height: 45, width: 45 }}
-            ></span>
-          </div>
-          <UncontrolledTooltip
-            delay={0}
-            placement="bottom"
-            target={tech.skillName}
-            style={{ fontSize: 20 }}
-          >
-            {tech.skillName}
-          </UncontrolledTooltip>
-        </Grid>
-      </>
+          <span
+            className="iconify"
+            data-icon={tech.fontAwesomeClassname}
+            data-inline="false"
+            style={{ height: 45, width: 45 }}
+          ></span>
+        </div>
+        <UncontrolledTooltip
+          delay={0}
+          placement="bottom"
+          target={tech.skillName}
+          style={{ fontSize: 20 }}
+        >
+          {tech.skillName}
+        </UncontrolledTooltip>
+      </Grid>
     );
   });
 
