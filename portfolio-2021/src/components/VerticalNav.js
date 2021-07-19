@@ -32,7 +32,7 @@ function VerticalNav() {
             width: 165,
             position: "fixed",
             zIndex: 11,
-            backgroundColor: "rgba(0, 0, 0, 0.3)",
+            backgroundColor: "rgba(0, 0, 0, 0.0)",
             height: "100%",
           }}
         >
@@ -47,7 +47,7 @@ function VerticalNav() {
                 <NavItem style={{ marginRight: 0 }}>
                   <NavLink to="/">
                     <Button
-                      color="primary"
+                      color="success"
                       size="lg"
                       style={{ width: "100%", marginBottom: 20, fontSize: 22 }}
                     >
@@ -59,7 +59,7 @@ function VerticalNav() {
                 <NavItem style={{ marginRight: 0 }}>
                   <NavLink to="/projects">
                     <Button
-                      color="primary"
+                      color="info"
                       size="lg"
                       style={{ width: "100%", marginBottom: 20, fontSize: 22 }}
                     >
@@ -78,6 +78,17 @@ function VerticalNav() {
                     </Button>
                   </NavLink>
                 </NavItem>
+                <NavItem style={{ marginRight: 0 }}>
+                  <NavLink to="/">
+                    <Button
+                      color="secondary"
+                      size="lg"
+                      style={{ width: "100%", marginBottom: 20, fontSize: 22 }}
+                    >
+                      Pat Facts
+                    </Button>
+                  </NavLink>
+                </NavItem>
                 <NavItem
                   style={{
                     color: "white",
@@ -87,7 +98,7 @@ function VerticalNav() {
                     fontSize: 20,
                   }}
                 >
-                  Contact Info
+                  Contact Me
                 </NavItem>
                 <NavItem style={{ marginRight: 0 }}>
                   <Button

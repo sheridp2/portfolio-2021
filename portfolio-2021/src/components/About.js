@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
   },
   aboutContainer: {
     position: "relative",
-    top: "-180px",
+    top: "-150px",
     [theme.breakpoints.down("md")]: {
       top: "-150px",
     },
@@ -29,7 +29,12 @@ export default function About() {
       <Fade duration={1000} distance="40px" bottom>
         <Container>
           <Grid item>
-            <h1 className={classes.mainText}>A little about me</h1>
+            <h1 className={classes.mainText}>
+              A little about <span style={{ color: "#CC5500" }}>me</span>
+            </h1>
+            <p className={classes.missionText}>
+              Let's change the world, one line of code at a time
+            </p>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text

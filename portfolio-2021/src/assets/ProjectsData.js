@@ -104,7 +104,7 @@ const ProjectsData = [
     featured: true,
   },
   {
-    name: "NBA Assits",
+    name: "NBA Assists",
     image: nbaAssistImage,
     description: "NBA player stat/trading card app",
     frontendRepo: "N/A",

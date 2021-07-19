@@ -1,11 +1,11 @@
 const TechnologiesData = [
   {
-    skillName: "JavaScript",
-    fontAwesomeClassname: "logos:javascript",
-  },
-  {
     skillName: "React",
     fontAwesomeClassname: "logos:react",
+  },
+  {
+    skillName: "JavaScript",
+    fontAwesomeClassname: "logos:javascript",
   },
   {
     skillName: "CSS3",

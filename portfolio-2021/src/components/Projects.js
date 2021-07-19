@@ -62,9 +62,9 @@ function Projects() {
       <div className="position-relative">
         <section
           className="section section-lg section-shaped pb-250"
-          style={{ paddingTop: 40 }}
+          style={{ paddingTop: 0 }}
         >
-          <div className="shape shape-style-1 bg-gradient-green">
+          <div className="shape shape-style-1 bg-gradient-teal">
             <span />
             <span />
             <span />

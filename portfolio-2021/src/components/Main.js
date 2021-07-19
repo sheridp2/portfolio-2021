@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
   secondaryText: {
     fontSize: 35,
-    fontWeight: "bold",
+
     color: "white",
     [theme.breakpoints.down("xs")]: {
       fontSize: 30,
@@ -68,7 +68,7 @@ function Main(props) {
           className="section section-lg section-shaped pb-250"
           style={{ paddingTop: 0 }}
         >
-          <div className="shape shape-style-1 bg-gradient-green">
+          <div className="shape shape-style-1 bg-gradient-teal">
             <span />
             <span />
             <span />
@@ -91,10 +91,9 @@ function Main(props) {
                     style={{ zIndex: 10 }}
                   >
                     <h1 className={classes.mainText}>Patrick Sheridan</h1>
-                    <p className={classes.secondaryText}>Front End Developer</p>
-                    <p className={classes.missionText}>
-                      Let's change the world, one line of code at a time
-                    </p>
+                    <h2 className={classes.secondaryText}>
+                      Front End Developer
+                    </h2>
                   </Grid>
 
                   <Grid
