@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
 
 import ResponsiveDrawer from "./ResponsiveDrawer";
 import { Container, Grid } from "@material-ui/core";
@@ -14,7 +15,32 @@ import {
   Button,
 } from "reactstrap";
 
+const useStyles = makeStyles((theme) => ({
+  button: {
+    background: "yellow",
+    boxShadow: "4px 4px 0 rgba(0,0,0,.5)",
+
+    display: "inline-block",
+    fontSize: "1.5em",
+    marginLeft: 15,
+    marginBottom: 10,
+    width: 200,
+    padding: ".5em 2em",
+    textDecoration: "none",
+    transform: "skew(-16deg)",
+    "&:hover": {
+      transform: "skew(-18deg)",
+      boxShadow: "10px 10px 0 rgba(0,0,0,.5)",
+    },
+  },
+
+  skewFix: {
+    display: "inline-block",
+  },
+}));
+
 function VerticalNav() {
+  const classes = useStyles();
   const [isOpen, setIsOpen] = useState(true);
   const [isDesktop, setDesktop] = useState(window.innerWidth > 1450);
 
@@ -36,11 +62,10 @@ function VerticalNav() {
       {isDesktop ? (
         <div
           style={{
-            width: 165,
             position: "fixed",
             zIndex: 11,
             backgroundColor: "rgba(0, 0, 0, 0.0)",
-            height: "100%",
+            top: 10,
           }}
         >
           <Navbar
@@ -53,36 +78,18 @@ function VerticalNav() {
               <Nav navbar>
                 <NavItem style={{ marginRight: 0 }}>
                   <NavLink to="/">
-                    <Button
-                      color="success"
-                      size="lg"
-                      style={{ width: "100%", marginBottom: 20, fontSize: 22 }}
-                    >
-                      Home
-                    </Button>
+                    <Button className={classes.button}>Home</Button>
                   </NavLink>
                 </NavItem>
 
                 <NavItem style={{ marginRight: 0 }}>
                   <NavLink to="/projects">
-                    <Button
-                      color="info"
-                      size="lg"
-                      style={{ width: "100%", marginBottom: 20, fontSize: 22 }}
-                    >
-                      Projects
-                    </Button>
+                    <Button className={classes.button}>Projects</Button>
                   </NavLink>
                 </NavItem>
                 <NavItem style={{ marginRight: 0 }}>
                   <NavLink to="/resume">
-                    <Button
-                      color="primary"
-                      size="lg"
-                      style={{ width: "100%", marginBottom: 20, fontSize: 22 }}
-                    >
-                      Resume
-                    </Button>
+                    <Button className={classes.button}>Resume</Button>
                   </NavLink>
                 </NavItem>
 
@@ -91,13 +98,11 @@ function VerticalNav() {
                 </NavItem>
                 <NavItem
                   style={{
-                    color: "white",
+                    color: "black",
                     fontWeight: "bold",
                     textAlign: "center",
                     paddingTop: 10,
                     fontSize: 24,
-                    textShadow:
-                      "1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000",
                   }}
                 >
                   Contact Me
@@ -133,8 +138,8 @@ function VerticalNav() {
                               data-icon="logos:google-gmail"
                               data-inline="false"
                               style={{
-                                height: 35,
-                                width: 35,
+                                height: 40,
+                                width: 40,
                               }}
                             ></span>
                           </div>
@@ -169,8 +174,8 @@ function VerticalNav() {
                               data-icon="logos:github-icon"
                               data-inline="false"
                               style={{
-                                height: 35,
-                                width: 35,
+                                height: 40,
+                                width: 40,
                               }}
                             ></span>
                           </div>
@@ -205,8 +210,8 @@ function VerticalNav() {
                               data-icon="logos:linkedin-icon"
                               data-inline="false"
                               style={{
-                                height: 35,
-                                width: 35,
+                                height: 40,
+                                width: 40,
                               }}
                             ></span>
                           </div>

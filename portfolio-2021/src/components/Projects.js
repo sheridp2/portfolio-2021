@@ -35,12 +35,17 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   mainContainer: {
+    [theme.breakpoints.down("md")]: {
+      position: "relative",
+      top: "50px",
+    },
     [theme.breakpoints.down("sm")]: {
       position: "relative",
+      top: "20px",
     },
     [theme.breakpoints.down("xs")]: {
       position: "relative",
-      top: "-30px",
+      top: "10px",
     },
   },
 }));
