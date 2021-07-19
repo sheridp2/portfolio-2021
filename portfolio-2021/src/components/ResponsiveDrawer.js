@@ -193,101 +193,113 @@ export default function ResponsiveDrawer() {
               />
             </ListItem>
           </NavLink>
-          <NavLink to="">
-            <ListItem>
-              <div
-                className="icon icon-sm"
-                style={{
-                  color: "#e8e3e3",
-                  display: "inline-block",
-                  marginRight: 14,
-                }}
-              >
+          <hr style={{ width: "90%", marginTop: 8, marginBottom: 8 }} />
+          <ListItem>
+            <ListItemText>
+              <ListItemText
+                primary={
+                  <Typography
+                    variant="h6"
+                    style={{ fontSize: 24, color: "black" }}
+                  >
+                    Contact Me
+                  </Typography>
+                }
+              />
+            </ListItemText>
+          </ListItem>
+
+          <a
+            id="gmail"
+            href="mailto:sheridp2@gmail.com"
+            target="_blank"
+            rel="noopener"
+          >
+            <ListItem button>
+              <ListItemIcon>
                 <span
                   className="iconify"
                   data-icon="logos:google-gmail"
                   data-inline="false"
                   style={{
-                    height: 35,
-                    width: 35,
+                    height: 30,
+                    width: 30,
                   }}
                 ></span>
-              </div>
-
-              {/* <Grid item sm={4}>
-                  <a
-                    href="https://github.com/sheridp2"
-                    target="_blank"
-                    rel="noopener"
-                    id="github"
+              </ListItemIcon>
+              <ListItemText
+                primary={
+                  <Typography
+                    variant="h6"
+                    style={{ fontSize: 24, color: "#5e72e4" }}
                   >
-                    <div
-                      className="icon icon-sm"
-                      style={{
-                        color: "#e8e3e3",
-                        display: "inline-block",
-                        marginRight: 14,
-                      }}
-                    >
-                      <span
-                        className="iconify"
-                        data-icon="logos:github-icon"
-                        data-inline="false"
-                        style={{
-                          height: 35,
-                          width: 35,
-                        }}
-                      ></span>
-                    </div>
-
-                    <UncontrolledTooltip
-                      delay={0}
-                      placement="bottom"
-                      target="github"
-                      style={{ fontSize: 15, width: 300 }}
-                    >
-                      Github: https://github.com/sheridp2
-                    </UncontrolledTooltip>
-                  </a>
-                </Grid>
-                <Grid item sm={4}>
-                  <a
-                    href="https://www.linkedin.com/in/patrick-sheridan/"
-                    target="_blank"
-                    rel="noopener"
-                    id="linkedin"
-                  >
-                    <div
-                      className="icon icon-sm"
-                      style={{
-                        color: "#e8e3e3",
-                        display: "inline-block",
-                        marginRight: 14,
-                      }}
-                    >
-                      <span
-                        className="iconify"
-                        data-icon="logos:linkedin-icon"
-                        data-inline="false"
-                        style={{
-                          height: 35,
-                          width: 35,
-                        }}
-                      ></span>
-                    </div>
-
-                    <UncontrolledTooltip
-                      delay={0}
-                      placement="bottom"
-                      target="linkedin"
-                      style={{ fontSize: 15, width: 300 }}
-                    >
-                      LinkedIn: https://www.linkedin.com/in/patrick-sheridan/
-                    </UncontrolledTooltip>
-                  </a>
-                </Grid> */}
+                    Email
+                  </Typography>
+                }
+              />
             </ListItem>
-          </NavLink>
+          </a>
+          <a
+            id="github"
+            href="https://github.com/sheridp2"
+            target="_blank"
+            rel="noopener"
+          >
+            <ListItem button>
+              <ListItemIcon>
+                <span
+                  className="iconify"
+                  data-icon="logos:github-icon"
+                  data-inline="false"
+                  style={{
+                    height: 30,
+                    width: 30,
+                  }}
+                ></span>
+              </ListItemIcon>
+              <ListItemText
+                primary={
+                  <Typography
+                    variant="h6"
+                    style={{ fontSize: 24, color: "#5e72e4" }}
+                  >
+                    Github
+                  </Typography>
+                }
+              />
+            </ListItem>
+          </a>
+
+          <a
+            id="linkedin"
+            href="https://www.linkedin.com/in/patrick-sheridan/"
+            target="_blank"
+            rel="noopener"
+          >
+            <ListItem button>
+              <ListItemIcon>
+                <span
+                  className="iconify"
+                  data-icon="logos:linkedin-icon"
+                  data-inline="false"
+                  style={{
+                    height: 30,
+                    width: 30,
+                  }}
+                ></span>
+              </ListItemIcon>
+              <ListItemText
+                primary={
+                  <Typography
+                    variant="h6"
+                    style={{ fontSize: 24, color: "#5e72e4" }}
+                  >
+                    LinkedIn
+                  </Typography>
+                }
+              />
+            </ListItem>
+          </a>
         </List>
       </Drawer>
     </div>

@@ -15,10 +15,10 @@ const useStyles = makeStyles((theme) => ({
       top: "-170px",
     },
     [theme.breakpoints.down("sm")]: {
-      top: "-90px",
+      top: "-80px",
     },
     [theme.breakpoints.down("xs")]: {
-      top: "-140px",
+      top: "-130px",
     },
   },
 }));

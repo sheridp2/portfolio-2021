@@ -6,6 +6,7 @@ import { Fade } from "react-reveal";
 const useStyles = makeStyles((theme) => ({
   mainText: {
     fontWeight: "bold",
+    fontSize: 35,
   },
   aboutContainer: {
     position: "relative",
@@ -14,10 +15,10 @@ const useStyles = makeStyles((theme) => ({
       top: "-150px",
     },
     [theme.breakpoints.down("sm")]: {
-      top: "-90px",
+      top: "-80px",
     },
     [theme.breakpoints.down("xs")]: {
-      top: "-140px",
+      top: "-130px",
     },
   },
 }));
@@ -29,9 +30,9 @@ export default function About() {
       <Fade duration={1000} distance="40px" bottom>
         <Container>
           <Grid item>
-            <h1 className={classes.mainText}>
+            <h2 className={classes.mainText}>
               A little about <span style={{ color: "#CC5500" }}>me</span>
-            </h1>
+            </h2>
             <p className={classes.missionText}>
               Let's change the world, one line of code at a time
             </p>

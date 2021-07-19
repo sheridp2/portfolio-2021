@@ -13,29 +13,27 @@ import LottieAnimate from "./LottieAnimate";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    // fontFamily: "Rubik, sans-serif",
+
     color: "#525f7f",
   },
   mainText: {
-    fontSize: 65,
+    fontSize: 50,
     color: "white",
     fontWeight: "bold",
     marginBottom: 0,
+    lineHeight: 1.1,
     [theme.breakpoints.down("xs")]: {
       fontSize: 60,
     },
   },
   secondaryText: {
     fontSize: 35,
+    lineHeight: 1.5,
 
     color: "white",
     [theme.breakpoints.down("xs")]: {
       fontSize: 30,
     },
-  },
-  missionText: {
-    fontSize: 24,
-    fontWeight: "bold",
   },
 
   meText: {
@@ -45,17 +43,14 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     [theme.breakpoints.down("md")]: {
       position: "relative",
-      top: "50px",
+      top: "80px",
     },
   },
   lottieImage: {
     [theme.breakpoints.down("xs")]: {
       position: "relative",
-      top: "-40px",
+      top: "-20px",
     },
-  },
-  socialMedias: {
-    fontSize: "20px",
   },
 }));
 
@@ -90,9 +85,12 @@ function Main(props) {
                     className={classes.meText}
                     style={{ zIndex: 10 }}
                   >
-                    <h1 className={classes.mainText}>Patrick Sheridan</h1>
+                    <h1 className={classes.mainText}>
+                      Hello, I'm Patrick Sheridan
+                      <br /> a Front-End Developer
+                    </h1>
                     <h2 className={classes.secondaryText}>
-                      Front End Developer
+                      Welcome to my portfolio site
                     </h2>
                   </Grid>
 
