@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#525f7f",
   },
   mainText: {
-    fontSize: 50,
+    fontSize: 48,
     color: "white",
     fontWeight: "bold",
     marginBottom: 0,
@@ -86,7 +86,7 @@ function Main(props) {
                     style={{ zIndex: 10 }}
                   >
                     <h1 className={classes.mainText}>
-                      Hello, I'm Patrick Sheridan
+                      Hello, I'm Patrick Sheridan,
                       <br /> a Front-End Developer
                     </h1>
                     <h2 className={classes.secondaryText}>

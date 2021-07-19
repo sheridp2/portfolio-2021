@@ -69,7 +69,7 @@ function Skills() {
           <Grid container>
             <Grid item>
               <h2 style={{ color: "white", fontSize: 35, fontWeight: "bold" }}>
-                What I work with
+                I work with
               </h2>
               <Grid container>{allTech}</Grid>
             </Grid>

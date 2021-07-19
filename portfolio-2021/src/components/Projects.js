@@ -94,9 +94,17 @@ function Projects() {
                     direction="down"
                     isOpen={dropdownOpen}
                     toggle={toggle}
-                    style={{ maxWidth: 100, zIndex: 11, paddingTop: 8 }}
+                    style={{
+                      maxWidth: 100,
+                      zIndex: 11,
+                      paddingTop: 8,
+                    }}
                   >
-                    <DropdownToggle caret color="secondary">
+                    <DropdownToggle
+                      caret
+                      color="secondary"
+                      style={{ boxShadow: "4px 4px 0 rgba(0,0,0,.5)" }}
+                    >
                       Project Filter
                     </DropdownToggle>
 
