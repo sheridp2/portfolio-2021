@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Container, Grid, Card, CardMedia } from "@material-ui/core";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import { Fade } from "react-reveal";
 import { Badge, Button } from "reactstrap";
@@ -101,6 +102,7 @@ function ProjectList(props) {
   }, [props.filter]);
 
   const classes = useStyles();
+
   let projectTiles = diplayedProjects.map((project) => {
     return (
       <Grid item lg={4} md={4} sm={6} xs={12}>
@@ -166,6 +168,10 @@ function ProjectList(props) {
             >
               {project.name}
             </h3>
+            <h4>
+              <Badge color="success">{project.company}</Badge>
+            </h4>
+
             <p>{project.description}</p>
             <Grid container>
               <Grid item sm={6}>
