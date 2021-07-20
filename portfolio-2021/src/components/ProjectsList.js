@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Container, Grid } from "@material-ui/core";
+import {
+  Container,
+  Grid,
+  Card,
+  CardMedia,
+  CardActions,
+  CardContent,
+  Typography,
+} from "@material-ui/core";
+
 import { Fade } from "react-reveal";
 import { Badge, Button } from "reactstrap";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
@@ -10,9 +19,9 @@ import projectsData from "../assets/ProjectsData";
 const useStyles = makeStyles((theme) => ({
   returnedProjects: {
     position: "relative",
-    top: "-230px",
+    top: "-180px",
     [theme.breakpoints.down("md")]: {
-      top: "-200px",
+      top: "-140px",
     },
     [theme.breakpoints.down("sm")]: {
       top: "-40px",
@@ -28,17 +37,16 @@ const useStyles = makeStyles((theme) => ({
   },
   cards: {
     width: "100%",
-    height: 240,
-    borderRadius: "2px",
-    [theme.breakpoints.down("md")]: {
-      height: 220,
+    transition: "all .4s ease",
+    boxShadow: "8px 8px rgba(0,0,0,.15)",
+
+    "&:hover": {
+      boxShadow: "12px 12px rgba(0,0,0,.15)",
     },
-    [theme.breakpoints.down("sm")]: {
-      height: 280,
-    },
-    [theme.breakpoints.down("xs")]: {
-      height: 250,
-    },
+
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
+    [theme.breakpoints.down("xs")]: {},
   },
 }));
 
@@ -84,14 +92,32 @@ function ProjectList(props) {
           flipDirection="horizontal"
         >
           <FrontSide style={{ backgroundColor: "white", padding: 0 }}>
-            <img className={classes.cards} src={project.image} style={{}} />
+            <Card className={classes.cards} style={{ padding: 10 }}>
+              <CardMedia
+                image={`${project.image}`}
+                style={{ height: 250, padding: 20 }}
+              />
+            </Card>
           </FrontSide>
-          <BackSide>
+          <BackSide style={{ backgroundColor: "white" }}>
             <h2 style={{ fontWeight: "bold" }}>{project.name}</h2>
 
             <h4>
               <Badge color="success">{project.company}</Badge>
             </h4>
+            <Grid container spacing={1}>
+              {project.technolgies.map((tech) => {
+                return (
+                  <Grid item key={tech.skillName}>
+                    <h5>
+                      <Badge color="primary" pill>
+                        {tech.skillName}
+                      </Badge>
+                    </h5>
+                  </Grid>
+                );
+              })}
+            </Grid>
           </BackSide>
         </Flippy>
       </Grid>

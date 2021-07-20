@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "65px",
     color: "white",
     fontWeight: "bold",
+    textShadow: " 2px 2px black",
   },
   meText: {
     display: "flex",
@@ -109,14 +110,19 @@ function Projects() {
                       Project Filter
                     </DropdownToggle>
 
-                    <DropdownMenu aria-labelledby="dropdownMenuButton">
+                    <DropdownMenu
+                      aria-labelledby="dropdownMenuButton"
+                      style={{ zIndex: 11 }}
+                    >
                       <DropdownItem
+                        style={{ zIndex: 11 }}
                         onClick={(e) => workPersonalFilter(e)}
                         value="All Projects"
                       >
                         All Projects
                       </DropdownItem>
                       <DropdownItem
+                        style={{ zIndex: 11 }}
                         onClick={(e) => workPersonalFilter(e)}
                         value="Professional"
                       >
@@ -124,6 +130,7 @@ function Projects() {
                       </DropdownItem>
 
                       <DropdownItem
+                        style={{ zIndex: 12 }}
                         onClick={(e) => workPersonalFilter(e)}
                         value="Personal"
                       >

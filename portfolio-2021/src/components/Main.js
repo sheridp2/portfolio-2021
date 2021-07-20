@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     marginBottom: 0,
     lineHeight: 1.1,
-    textShadow: " 3px 3px black",
+    textShadow: "2px 2px black",
     [theme.breakpoints.down("xs")]: {
       fontSize: 60,
     },
