@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  Container,
-  Grid,
-  Card,
-  CardMedia,
-  CardActions,
-  CardContent,
-  Typography,
-} from "@material-ui/core";
+import { Container, Grid, Card, CardMedia } from "@material-ui/core";
 
 import { Fade } from "react-reveal";
 import { Badge, Button } from "reactstrap";
@@ -30,23 +22,50 @@ const useStyles = makeStyles((theme) => ({
       top: "-100px",
     },
   },
-  projectCard: {
-    "&:hover": {
-      backgroundColor: "black",
-    },
-  },
+
   cards: {
     width: "100%",
     transition: "all .4s ease",
     boxShadow: "8px 8px rgba(0,0,0,.15)",
-
+    position: "relative",
     "&:hover": {
       boxShadow: "12px 12px rgba(0,0,0,.15)",
+      "& $image": {
+        opacity: 0.1,
+      },
+      "& $middle": {
+        opacity: 1,
+      },
     },
+  },
 
-    [theme.breakpoints.down("md")]: {},
-    [theme.breakpoints.down("sm")]: {},
-    [theme.breakpoints.down("xs")]: {},
+  image: {
+    opacity: 1,
+    display: "block",
+    width: "100%",
+    height: "auto",
+    transition: ".5s ease",
+    backfaceVisibility: "hidden",
+  },
+
+  middle: {
+    transition: ".5s ease",
+    opacity: "0",
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    transform: "translate(-50%, -50%)",
+    textAlign: "",
+    width: 320,
+    [theme.breakpoints.down("xs")]: {
+      width: 280,
+    },
+  },
+
+  text: {
+    fontSize: "16px",
+    padding: "0px 0px",
   },
 }));
 
@@ -92,31 +111,69 @@ function ProjectList(props) {
           flipDirection="horizontal"
         >
           <FrontSide style={{ backgroundColor: "white", padding: 0 }}>
-            <Card className={classes.cards} style={{ padding: 10 }}>
+            <Card className={classes.cards} style={{ padding: 0 }}>
               <CardMedia
+                className={classes.image}
                 image={`${project.image}`}
                 style={{ height: 250, padding: 20 }}
               />
+              <div className={classes.middle}>
+                <div className={classes.text}>
+                  <h3
+                    style={{
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {project.name}
+                  </h3>
+                  <Grid container spacing={1}>
+                    {project.technolgies.map((tech) => {
+                      return (
+                        <Grid item key={tech.skillName}>
+                          <h6>
+                            <Badge color="primary" pill>
+                              {tech.skillName}
+                            </Badge>
+                          </h6>
+                        </Grid>
+                      );
+                    })}
+                  </Grid>
+                  <Grid container>
+                    <Grid item xs={8} style={{ paddingTop: 10 }}>
+                      <h4>
+                        <Button color="success" outline>
+                          <span className="btn-inner--text">Learn More</span>
+                          <span
+                            className="btn-inner--icon"
+                            style={{ paddingLeft: 5 }}
+                          >
+                            <i className="ni ni-bold-right"></i>
+                          </span>
+                        </Button>
+                      </h4>
+                    </Grid>
+                  </Grid>
+                </div>
+              </div>
             </Card>
           </FrontSide>
           <BackSide style={{ backgroundColor: "white" }}>
-            <h2 style={{ fontWeight: "bold" }}>{project.name}</h2>
-
-            <h4>
-              <Badge color="success">{project.company}</Badge>
-            </h4>
-            <Grid container spacing={1}>
-              {project.technolgies.map((tech) => {
-                return (
-                  <Grid item key={tech.skillName}>
-                    <h5>
-                      <Badge color="primary" pill>
-                        {tech.skillName}
-                      </Badge>
-                    </h5>
-                  </Grid>
-                );
-              })}
+            <h3
+              style={{
+                fontWeight: "bold",
+              }}
+            >
+              {project.name}
+            </h3>
+            <p>{project.description}</p>
+            <Grid container>
+              <Grid item sm={6}>
+                <a href={project.url}>Visit Website</a>
+              </Grid>
+              <Grid item sm={6}>
+                <a href={project.frontendRepo}>Github</a>
+              </Grid>
             </Grid>
           </BackSide>
         </Flippy>
@@ -124,94 +181,6 @@ function ProjectList(props) {
     );
   });
 
-  let mappedProjects = diplayedProjects.map((project) => {
-    return (
-      <div key={project.name}>
-        <Fade left duration={1000} distance="200px">
-          <div
-            style={{
-              paddingTop: 20,
-              marginTop: 20,
-              marginBottom: 20,
-            }}
-          >
-            <Container className="card shadow" style={{ padding: 15 }}>
-              <Grid container spacing={2}>
-                <Grid item sm={5}>
-                  <a href={project.url} target="_blank" rel="noreferrer">
-                    <img
-                      src={project.image}
-                      style={{
-                        width: "100%",
-                        border: "1px solid black",
-                        borderRadius: "5px",
-                      }}
-                    />
-                  </a>
-                </Grid>
-                <Grid item sm={7}>
-                  <a href={project.url} target="_blank" rel="noreferrer">
-                    <h2 style={{ fontWeight: "bold" }}>{project.name}</h2>
-                  </a>
-                  <h4>
-                    <Badge color="success">{project.company}</Badge>
-                  </h4>
-
-                  <p>{project.description}</p>
-                  <Grid container spacing={1}>
-                    {project.technolgies.map((tech) => {
-                      return (
-                        <Grid item key={tech.skillName}>
-                          <h5>
-                            <Badge color="primary" pill>
-                              {tech.skillName}
-                            </Badge>
-                          </h5>
-                        </Grid>
-                      );
-                    })}
-                  </Grid>
-
-                  <Grid container style={{ paddingTop: 15 }} spacing={2}>
-                    <Grid item>
-                      {project.frontendRepo !== "N/A" ? (
-                        <Button
-                          color="primary"
-                          href={project.frontendRepo}
-                          target="_blank"
-                          rel="noreferrer"
-                          outline
-                        >
-                          Frontend Repo
-                        </Button>
-                      ) : (
-                        <div></div>
-                      )}
-                    </Grid>
-                    <Grid item>
-                      {project.backendRepo !== "N/A" ? (
-                        <Button
-                          color="primary"
-                          href={project.backendRepo}
-                          target="_blank"
-                          rel="noreferrer"
-                          outline
-                        >
-                          Backend Repo
-                        </Button>
-                      ) : (
-                        <div></div>
-                      )}
-                    </Grid>
-                  </Grid>
-                </Grid>
-              </Grid>
-            </Container>
-          </div>
-        </Fade>
-      </div>
-    );
-  });
   return (
     <Container>
       <Grid container spacing={2} className={classes.returnedProjects}>
@@ -219,8 +188,6 @@ function ProjectList(props) {
       </Grid>
     </Container>
   );
-
-  // return <div className={classes.returnedProjects}>{mappedProjects}</div>;
 }
 
 export default ProjectList;

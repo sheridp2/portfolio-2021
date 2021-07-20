@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import ResponsiveDrawer from "./ResponsiveDrawer";
 import { Container, Grid } from "@material-ui/core";
+import resume from "../assets/images/Patrick_Sheridan_Resume_2021.pdf";
 
 // reactstrap components
 import {
@@ -89,9 +90,9 @@ function VerticalNav() {
                   </NavLink>
                 </NavItem>
                 <NavItem style={{ marginRight: 0 }}>
-                  <NavLink to="/resume">
+                  <a target="_blank" rel="noopener" href={resume}>
                     <Button className={classes.button}>Resume</Button>
-                  </NavLink>
+                  </a>
                 </NavItem>
 
                 <NavItem>
