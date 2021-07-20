@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Container, Grid } from "@material-ui/core";
-import projectsData from "../assets/ProjectsData";
 import { Fade } from "react-reveal";
 import { Badge, Button } from "reactstrap";
+import Flippy, { FrontSide, BackSide } from "react-flippy";
+
+import projectsData from "../assets/ProjectsData";
 
 const useStyles = makeStyles((theme) => ({
   returnedProjects: {
@@ -13,15 +15,29 @@ const useStyles = makeStyles((theme) => ({
       top: "-200px",
     },
     [theme.breakpoints.down("sm")]: {
-      top: "-80px",
+      top: "-40px",
     },
     [theme.breakpoints.down("xs")]: {
-      top: "-160px",
+      top: "-100px",
     },
   },
   projectCard: {
     "&:hover": {
       backgroundColor: "black",
+    },
+  },
+  cards: {
+    width: "100%",
+    height: 240,
+    borderRadius: "2px",
+    [theme.breakpoints.down("md")]: {
+      height: 220,
+    },
+    [theme.breakpoints.down("sm")]: {
+      height: 280,
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: 250,
     },
   },
 }));
@@ -58,6 +74,30 @@ function ProjectList(props) {
   }, [props.filter]);
 
   const classes = useStyles();
+  let projectTiles = diplayedProjects.map((project) => {
+    return (
+      <Grid item lg={4} md={4} sm={6} xs={12}>
+        <Flippy
+          key={project.name}
+          flipOnHover={false}
+          flipOnClick={true}
+          flipDirection="horizontal"
+        >
+          <FrontSide style={{ backgroundColor: "white", padding: 0 }}>
+            <img className={classes.cards} src={project.image} style={{}} />
+          </FrontSide>
+          <BackSide>
+            <h2 style={{ fontWeight: "bold" }}>{project.name}</h2>
+
+            <h4>
+              <Badge color="success">{project.company}</Badge>
+            </h4>
+          </BackSide>
+        </Flippy>
+      </Grid>
+    );
+  });
+
   let mappedProjects = diplayedProjects.map((project) => {
     return (
       <div key={project.name}>
@@ -146,8 +186,15 @@ function ProjectList(props) {
       </div>
     );
   });
+  return (
+    <Container>
+      <Grid container spacing={2} className={classes.returnedProjects}>
+        {projectTiles}
+      </Grid>
+    </Container>
+  );
 
-  return <div className={classes.returnedProjects}>{mappedProjects}</div>;
+  // return <div className={classes.returnedProjects}>{mappedProjects}</div>;
 }
 
 export default ProjectList;

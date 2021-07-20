@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     marginBottom: 0,
     lineHeight: 1.1,
+    textShadow: " 3px 3px black",
     [theme.breakpoints.down("xs")]: {
       fontSize: 60,
     },
@@ -29,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   secondaryText: {
     fontSize: 35,
     lineHeight: 1.5,
-
+    textShadow: " 2px 2px black",
     color: "white",
     [theme.breakpoints.down("xs")]: {
       fontSize: 30,

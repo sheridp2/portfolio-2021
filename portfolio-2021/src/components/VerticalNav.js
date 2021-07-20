@@ -95,7 +95,7 @@ function VerticalNav() {
                 </NavItem>
 
                 <NavItem>
-                  <hr className="my-2" />
+                  <hr />
                 </NavItem>
                 <div
                   style={{
@@ -103,6 +103,7 @@ function VerticalNav() {
                     paddingBottom: 20,
                     boxShadow: "4px 4px 0 rgba(0,0,0,.5)",
                     marginLeft: 10,
+
                     borderRadius: 8,
                   }}
                 >

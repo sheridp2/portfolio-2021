@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Container, Grid } from "@material-ui/core";
-import ProjectsList from "./ProjectsList";
-import developement from "../assets/lottie/64110-web-development.json";
 import { Fade } from "react-reveal";
+
 import {
   DropdownToggle,
   DropdownMenu,
@@ -11,6 +10,8 @@ import {
   Dropdown,
 } from "reactstrap";
 
+import ProjectsList from "./ProjectsList";
+import developement from "../assets/lottie/64110-web-development.json";
 import LottieAnimate from "./LottieAnimate";
 
 const useStyles = makeStyles((theme) => ({

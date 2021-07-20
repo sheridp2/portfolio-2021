@@ -68,7 +68,14 @@ function Skills() {
         <Fade duration={1000} distance="40px" bottom>
           <Grid container>
             <Grid item>
-              <h2 style={{ color: "white", fontSize: 35, fontWeight: "bold" }}>
+              <h2
+                style={{
+                  color: "white",
+                  fontSize: 35,
+                  fontWeight: "bold",
+                  textShadow: " 2px 2px black",
+                }}
+              >
                 I work with
               </h2>
               <Grid container>{allTech}</Grid>
