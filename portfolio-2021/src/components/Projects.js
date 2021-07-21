@@ -20,7 +20,10 @@ const useStyles = makeStyles((theme) => ({
   },
   mainContainer: {
     [theme.breakpoints.down(1700)]: {
-      marginRight: 30,
+      marginRight: 100,
+    },
+    [theme.breakpoints.down(1600)]: {
+      marginRight: 0,
     },
   },
 

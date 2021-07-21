@@ -54,7 +54,10 @@ const useStyles = makeStyles((theme) => ({
   },
   mainContainer: {
     [theme.breakpoints.down(1700)]: {
-      marginRight: 30,
+      marginRight: 100,
+    },
+    [theme.breakpoints.down(1600)]: {
+      marginRight: 0,
     },
   },
 }));
@@ -91,8 +94,7 @@ function Main(props) {
                     style={{ zIndex: 10 }}
                   >
                     <h1 className={classes.mainText}>
-                      Hello, I'm Patrick Sheridan,
-                      <br /> a Front-End Developer
+                      Hello, I'm Patrick Sheridan, a Front-End Developer
                     </h1>
                     <h2 className={classes.secondaryText}>
                       Welcome to my portfolio site
