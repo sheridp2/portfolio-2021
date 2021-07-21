@@ -3,13 +3,87 @@ import dashboardInsightsImage from "./images/dashboard-insights.png";
 import guessWorkImage from "./images/guesswork.png";
 import ai4accessibilityImage from "./images/ai4accessibility.png";
 import nbaAssistImage from "./images/nbaAssist.png";
+import emailyImage from "./images/emailyImage.png";
+import TI101 from "./images/img-2.png";
+import spotImage from "./images/img-3.png";
+import zipToSaleImage from "./images/ziptosaleImage.png";
+import flukeHomepage from "./images/img-5.png";
 
 const ProjectsData = [
+  {
+    name: "Fluke - Thermal Imaging 101",
+    image: TI101,
+    description: "Fluke guide to different aspects of thermal imaging",
+    frontendRepo: "",
+    backendRepo: "N/A",
+    url: "http://a.fluke.com/IG-GL-TI-THERMALIMAGING101-LP-1-A",
+    company: "Fluke",
+    technolgies: [
+      { skillName: "HTML5" },
+
+      {
+        skillName: "CSS3",
+      },
+      {
+        skillName: "Bootstrap",
+      },
+    ],
+    featured: true,
+  },
+  {
+    name: "Dashboard Insights - Accessibility Dashboard",
+    image: dashboardInsightsImage,
+    description: "Dashboard Insights Description",
+    frontendRepo: "N/A",
+    backendRepo: "N/A",
+    url: "http://dashboardaccessibility.azurewebsites.net/",
+    company: "ISoftStone",
+    technolgies: [
+      { skillName: "Accessibility", fontAwesomeClassname: "" },
+
+      { skillName: "React", fontAwesomeClassname: "logos:react" },
+
+      {
+        skillName: "NodeJS",
+        fontAwesomeClassname: "logos:nodejs-icon",
+      },
+      {
+        skillName: "Express",
+        fontAwesomeClassname: "",
+      },
+    ],
+    featured: true,
+  },
+
+  {
+    name: "Fluke - US and Global websites",
+    image: flukeHomepage,
+    description:
+      "Upkeep, maintenance, and NPI launches of Fluke's US and 63 global websites ",
+    frontendRepo: "",
+    backendRepo: "N/A",
+    url: "https://www.fluke.com/en-us",
+    company: "Fluke",
+    technolgies: [
+      { skillName: "HTML5" },
+
+      {
+        skillName: "CSS3",
+      },
+      {
+        skillName: "Javascript",
+      },
+      {
+        skillName: "Drupal5 CMS",
+      },
+    ],
+    featured: true,
+  },
   {
     name: "Reacter - Social Media App",
     image: reacterImage,
     description:
-      "Social media app similar to Twitter. Built with React, GraphQL, MongoDB, Node, and Express (MERNG stack)",
+      "Social media app similar to Twitter. Includes Login/Register, Commenting, and Liking ",
     frontendRepo: "https://github.com/sheridp2/react-social-media-app",
     backendRepo: "https://github.com/sheridp2/react-social-media-app-backend",
     url: "https://react-social-media-app.vercel.app/",
@@ -36,47 +110,28 @@ const ProjectsData = [
     featured: true,
   },
   {
-    name: "Guesswork (4 player Triva)",
-    image: guessWorkImage,
-    description:
-      "a Trivia app built with React, Redux, and the Open Trivia API. Up to 4 players, 3 difficulties, and minimal API calls show questions quickly and keep the game fast paced",
-    frontendRepo: "https://github.com/sheridp2/triviapp",
+    name: "Fluke - Spot The Differences",
+    image: spotImage,
+    description: "Fluke thermal imager application guide and contact form",
+    frontendRepo: "",
     backendRepo: "N/A",
-    url: "https://guesswork.herokuapp.com/",
-    company: "Personal",
+    url: "http://a.fluke.com/IG-GL-TI-2018-TIAPPLICATIONSPECIFICLP-1-A?lcid=2eb25055-cd99-e811-80c9-00155dfd7263&lrpf=306C4BD2-C170-DE11-95B8-02BF0A064B97&plt=200000000&cra=100000000&scl=6206&redir=http://download.fluke.com/ti-thank-you/thank-you-new-camera.html",
+    company: "Fluke",
     technolgies: [
-      { skillName: "React", fontAwesomeClassname: "logos:react" },
-
-      { skillName: "Redux", fontAwesomeClassname: "" },
-    ],
-    featured: false,
-  },
-  {
-    name: "Dashboard Insights - Accessibility Dashboard",
-    image: dashboardInsightsImage,
-    description: "Dashboard Insights Description",
-    frontendRepo: "N/A",
-    backendRepo: "N/A",
-    url: "http://dashboardaccessibility.azurewebsites.net/",
-    company: "ISoftStone",
-    technolgies: [
-      { skillName: "Accessibility", fontAwesomeClassname: "" },
-
-      { skillName: "React", fontAwesomeClassname: "logos:react" },
+      { skillName: "HTML5" },
 
       {
-        skillName: "NodeJS",
-        fontAwesomeClassname: "logos:nodejs-icon",
+        skillName: "CSS3",
       },
       {
-        skillName: "Express",
-        fontAwesomeClassname: "",
+        skillName: "Bootstrap",
       },
     ],
     featured: true,
   },
+
   {
-    name: "AI for Accesibility",
+    name: "AI for Accesibility - AI Captioning App",
     image: ai4accessibilityImage,
     description: "Dashboard Insights Description",
     frontendRepo: "N/A",
@@ -104,7 +159,7 @@ const ProjectsData = [
     featured: true,
   },
   {
-    name: "NBA Assists",
+    name: "NBA Assist - Player Card/Stat App",
     image: nbaAssistImage,
     description: "NBA player stat/trading card app",
     frontendRepo: "https://github.com/sheridp2/nba-assist",
@@ -123,26 +178,73 @@ const ProjectsData = [
         fontAwesomeClassname: "",
       },
     ],
-    featured: true,
+    featured: false,
   },
   {
-    name: "Emaily",
-    image: nbaAssistImage,
+    name: "Emaily - Email Survey App",
+    image: emailyImage,
     description: "App for business to email surveys to users",
     frontendRepo: "https://github.com/sheridp2/nba-assist",
     backendRepo: "N/A",
     url: "https://nba-assist.vercel.app/",
     company: "Personal",
     technolgies: [
-      { skillName: "React", fontAwesomeClassname: "logos:react" },
+      { skillName: "React" },
 
       {
         skillName: "NodeJS",
-        fontAwesomeClassname: "logos:nodejs-icon",
       },
       {
         skillName: "Express",
-        fontAwesomeClassname: "",
+      },
+      {
+        skillName: "MongoDB",
+      },
+      {
+        skillName: "Stripe",
+      },
+      {
+        skillName: "Google Oauth",
+      },
+    ],
+    featured: false,
+  },
+
+  {
+    name: "Guesswork - 4 player Triva",
+    image: guessWorkImage,
+    description:
+      "Trivia app. Up to 4 players, 3 difficulties. Question pulled from multiple categories",
+    frontendRepo: "https://github.com/sheridp2/triviapp",
+    backendRepo: "N/A",
+    url: "https://guesswork.herokuapp.com/",
+    company: "Personal",
+    technolgies: [
+      { skillName: "React", fontAwesomeClassname: "logos:react" },
+
+      { skillName: "Redux", fontAwesomeClassname: "" },
+    ],
+    featured: false,
+  },
+  {
+    name: "Fluke - Zip to Sales Tool",
+    image: zipToSaleImage,
+    description: "Fluke internal tool for finding sales reps based on zipcode",
+    frontendRepo: "",
+    backendRepo: "N/A",
+    url: "https://content.fluke.com/test/ziptosales/ziptosales.html",
+    company: "Fluke",
+    technolgies: [
+      { skillName: "HTML5" },
+
+      {
+        skillName: "CSS3",
+      },
+      {
+        skillName: "Javascript",
+      },
+      {
+        skillName: "Bootstrap",
       },
     ],
     featured: true,

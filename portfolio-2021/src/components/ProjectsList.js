@@ -113,7 +113,7 @@ function ProjectList(props) {
 
   let projectTiles = diplayedProjects.map((project) => {
     return (
-      <Grid item lg={4} md={4} sm={6} xs={12}>
+      <Grid item lg={4} md={4} sm={6} xs={12} style={{ paddingBottom: 30 }}>
         <Flippy
           key={project.name}
           flipOnHover={false}
@@ -125,7 +125,7 @@ function ProjectList(props) {
               <CardMedia
                 className={classes.image}
                 image={`${project.image}`}
-                style={{ height: 250, padding: 20 }}
+                style={{ height: 275, padding: 10 }}
               />
               <div className={classes.middle}>
                 <div className={classes.text}>
