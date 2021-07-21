@@ -107,7 +107,29 @@ const ProjectsData = [
     name: "NBA Assists",
     image: nbaAssistImage,
     description: "NBA player stat/trading card app",
-    frontendRepo: "N/A",
+    frontendRepo: "https://github.com/sheridp2/nba-assist",
+    backendRepo: "N/A",
+    url: "https://nba-assist.vercel.app/",
+    company: "Personal",
+    technolgies: [
+      { skillName: "React", fontAwesomeClassname: "logos:react" },
+
+      {
+        skillName: "NodeJS",
+        fontAwesomeClassname: "logos:nodejs-icon",
+      },
+      {
+        skillName: "Express",
+        fontAwesomeClassname: "",
+      },
+    ],
+    featured: true,
+  },
+  {
+    name: "Emaily",
+    image: nbaAssistImage,
+    description: "App for business to email surveys to users",
+    frontendRepo: "https://github.com/sheridp2/nba-assist",
     backendRepo: "N/A",
     url: "https://nba-assist.vercel.app/",
     company: "Personal",

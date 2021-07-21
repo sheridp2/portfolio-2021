@@ -13,7 +13,6 @@ import LottieAnimate from "./LottieAnimate";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-
     color: "#525f7f",
   },
   mainText: {
@@ -51,6 +50,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       position: "relative",
       top: "-20px",
+    },
+  },
+  mainContainer: {
+    [theme.breakpoints.down(1700)]: {
+      marginRight: 30,
     },
   },
 }));

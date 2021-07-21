@@ -8,6 +8,12 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     fontSize: 35,
   },
+  mainContainer: {
+    [theme.breakpoints.down(1700)]: {
+      marginRight: 30,
+    },
+  },
+
   aboutContainer: {
     position: "relative",
     top: "-150px",
@@ -29,7 +35,7 @@ export default function About() {
   return (
     <div className={classes.aboutContainer}>
       <Fade duration={1000} distance="40px" bottom>
-        <Container>
+        <Container className={classes.mainContainer}>
           <Grid container>
             <Grid item md={4} sm={6}>
               <h2 className={classes.mainText}>

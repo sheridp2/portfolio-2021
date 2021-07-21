@@ -21,6 +21,11 @@ const useStyles = makeStyles((theme) => ({
       top: "-130px",
     },
   },
+  mainContainer: {
+    [theme.breakpoints.down(1700)]: {
+      marginRight: 30,
+    },
+  },
 }));
 function Skills() {
   const classes = useStyles();
@@ -64,7 +69,7 @@ function Skills() {
 
   return (
     <div className={classes.returnedTech}>
-      <Container>
+      <Container className={classes.mainContainer}>
         <Fade duration={1000} distance="40px" bottom>
           <Grid container>
             <Grid item>

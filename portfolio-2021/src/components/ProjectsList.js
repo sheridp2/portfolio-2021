@@ -23,6 +23,11 @@ const useStyles = makeStyles((theme) => ({
       top: "-100px",
     },
   },
+  mainContainer: {
+    [theme.breakpoints.down(1700)]: {
+      marginRight: 30,
+    },
+  },
 
   cards: {
     width: "100%",
@@ -175,10 +180,14 @@ function ProjectList(props) {
             <p>{project.description}</p>
             <Grid container>
               <Grid item sm={6}>
-                <a href={project.url}>Visit Website</a>
+                <a rel="noreferrer" target="_blank" href={project.url}>
+                  Visit Website
+                </a>
               </Grid>
               <Grid item sm={6}>
-                <a href={project.frontendRepo}>Github</a>
+                <a rel="noreferrer" target="_blank" href={project.frontendRepo}>
+                  Github
+                </a>
               </Grid>
             </Grid>
           </BackSide>
@@ -188,7 +197,7 @@ function ProjectList(props) {
   });
 
   return (
-    <Container>
+    <Container className={classes.mainContainer}>
       <Grid container spacing={2} className={classes.returnedProjects}>
         {projectTiles}
       </Grid>

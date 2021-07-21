@@ -18,6 +18,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  mainContainer: {
+    [theme.breakpoints.down(1700)]: {
+      marginRight: 30,
+    },
+  },
+
   mainText: {
     fontSize: "65px",
     color: "white",
@@ -36,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
       top: "-50px",
     },
   },
-  mainContainer: {
+  mainInnerContainer: {
     [theme.breakpoints.down("md")]: {
       position: "relative",
       top: "50px",
@@ -80,9 +86,12 @@ function Projects() {
             <span />
             <span />
           </div>
-          <Container style={{ paddingLeft: 0, paddingRight: 0 }}>
+          <Container
+            style={{ paddingLeft: 0, paddingRight: 0 }}
+            className={classes.mainContainer}
+          >
             <Fade top duration={1000} distance="40px">
-              <Grid container className={classes.mainContainer}>
+              <Grid container className={classes.mainInnerContainer}>
                 <Grid item md={7} sm={12}>
                   <LottieAnimate
                     animationData={developement}
