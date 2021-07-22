@@ -2,6 +2,9 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Container, Grid, Button, Icon } from "@material-ui/core";
 import { Fade } from "react-reveal";
+import { Card, CardBody, CardImg, CardTitle, CardText } from "reactstrap";
+import forestServiceImage from "../assets/images/forestservice.JPG";
+import AboutDetails from "./AboutDetails";
 
 const useStyles = makeStyles((theme) => ({
   mainText: {
@@ -45,34 +48,10 @@ export default function About() {
                 A little about <span style={{ color: "#CC5500" }}>me</span>
               </h2>
             </Grid>
-            {/* <Grid item md={2} sm={6}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={classes.button}
-              >
-                Learn More About Me
-              </Button>
-            </Grid> */}
-
+          </Grid>
+          <Grid container>
             <Grid item>
-              <p className={classes.missionText}>
-                Let's change the world, one line of code at a time
-              </p>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.
-              </p>
-
-              <ul>
-                <li>Lorem ipsum dolor sit amet consectetuer.</li>
-                <li>Aenean commodo ligula eget dolor.</li>
-                <li>Aenean massa cum sociis natoque penatibus.</li>
-              </ul>
+              <AboutDetails />
             </Grid>
           </Grid>
         </Container>

@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.5em",
     marginLeft: 15,
     marginBottom: 10,
-    width: 200,
+    width: 220,
     padding: ".5em 2em",
     textDecoration: "none",
     boxShadow: "4px 4px 0 rgba(0,0,0,.5)",
@@ -90,7 +90,7 @@ function VerticalNav() {
                   </NavLink>
                 </NavItem>
                 <NavItem style={{ marginRight: 0 }}>
-                  <a target="_blank" rel="noopener" href={resume}>
+                  <a target="_blank" rel="noreferrer" href={resume}>
                     <Button className={classes.button}>Resume</Button>
                   </a>
                 </NavItem>
@@ -136,7 +136,7 @@ function VerticalNav() {
                             id="gmail"
                             href="mailto:sheridp2@gmail.com"
                             target="_blank"
-                            rel="noopener"
+                            rel="noreferrer"
                           >
                             <div
                               className="icon icon-sm"
@@ -171,7 +171,7 @@ function VerticalNav() {
                           <a
                             href="https://github.com/sheridp2"
                             target="_blank"
-                            rel="noopener"
+                            rel="noreferrer"
                             id="github"
                           >
                             <div
@@ -207,7 +207,7 @@ function VerticalNav() {
                           <a
                             href="https://www.linkedin.com/in/patrick-sheridan/"
                             target="_blank"
-                            rel="noopener"
+                            rel="noreferrer"
                             id="linkedin"
                           >
                             <div

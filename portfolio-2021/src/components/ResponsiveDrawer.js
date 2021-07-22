@@ -213,7 +213,7 @@ export default function ResponsiveDrawer() {
             id="gmail"
             href="mailto:sheridp2@gmail.com"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             <ListItem button>
               <ListItemIcon>
@@ -243,7 +243,7 @@ export default function ResponsiveDrawer() {
             id="github"
             href="https://github.com/sheridp2"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             <ListItem button>
               <ListItemIcon>
@@ -274,7 +274,7 @@ export default function ResponsiveDrawer() {
             id="linkedin"
             href="https://www.linkedin.com/in/patrick-sheridan/"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             <ListItem button>
               <ListItemIcon>

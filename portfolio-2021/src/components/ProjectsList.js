@@ -177,19 +177,31 @@ function ProjectList(props) {
               {project.name}
             </h3>
             <h4>
-              <Badge color="success">{project.company}</Badge>
+              <Badge color="warning">{project.company}</Badge>
             </h4>
 
-            <p>{project.description}</p>
-            <Grid container>
-              <Grid item sm={6}>
-                <a rel="noreferrer" target="_blank" href={project.url}>
-                  Visit Website
+            <h6 style={{ paddingTop: 10, fontSize: 18 }}>
+              {project.description}
+            </h6>
+            <Grid container style={{ position: "absolute", bottom: 20 }}>
+              <Grid item xs={6}>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href={project.frontendRepo}
+                  style={{ fontSize: 18 }}
+                >
+                  Github Repo <span style={{ fontSize: 18 }}>&#x2192;</span>
                 </a>
               </Grid>
-              <Grid item sm={6}>
-                <a rel="noreferrer" target="_blank" href={project.frontendRepo}>
-                  Github
+              <Grid item xs={6}>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href={project.url}
+                  style={{ fontSize: 18 }}
+                >
+                  Visit Website <span style={{ fontSize: 18 }}>&#x2192;</span>
                 </a>
               </Grid>
             </Grid>
