@@ -50,9 +50,7 @@ export default function About() {
             </Grid>
           </Grid>
           <Grid container>
-            <Grid item>
-              <AboutDetails />
-            </Grid>
+            <Grid item>{/* <AboutDetails /> */}</Grid>
           </Grid>
         </Container>
       </Fade>
