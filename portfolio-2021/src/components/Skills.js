@@ -22,11 +22,18 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   mainContainer: {
-    [theme.breakpoints.down(1700)]: {
-      marginRight: 100,
+    [theme.breakpoints.down(1800)]: {
+      marginRight: 150,
     },
-    [theme.breakpoints.down(1600)]: {
+    [theme.breakpoints.down(1730)]: {
+      marginRight: 75,
+    },
+    [theme.breakpoints.down(1625)]: {
       marginRight: 0,
+    },
+    [theme.breakpoints.down(1525)]: {
+      marginLeft: 0,
+      maxWidth: "100%",
     },
   },
 }));

@@ -12,11 +12,18 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 35,
   },
   mainContainer: {
-    [theme.breakpoints.down(1700)]: {
-      marginRight: 100,
+    [theme.breakpoints.down(1800)]: {
+      marginRight: 150,
     },
-    [theme.breakpoints.down(1600)]: {
+    [theme.breakpoints.down(1730)]: {
+      marginRight: 75,
+    },
+    [theme.breakpoints.down(1625)]: {
       marginRight: 0,
+    },
+    [theme.breakpoints.down(1525)]: {
+      marginLeft: 0,
+      maxWidth: "100%",
     },
   },
 
@@ -42,7 +49,7 @@ export default function About() {
     <div className={classes.aboutContainer}>
       <Fade duration={1000} distance="40px" bottom>
         <Container className={classes.mainContainer}>
-          <Grid container>
+          <Grid container style={{ paddingBottom: 20 }}>
             <Grid item md={4} sm={6}>
               <h2 className={classes.mainText}>
                 A little about <span style={{ color: "#CC5500" }}>me</span>
@@ -50,7 +57,7 @@ export default function About() {
             </Grid>
           </Grid>
           <Grid container>
-            <Grid item>{/* <AboutDetails /> */}</Grid>
+            <AboutDetails />
           </Grid>
         </Container>
       </Fade>
