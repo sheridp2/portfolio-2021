@@ -44,10 +44,10 @@ const useStyles = makeStyles((theme) => ({
 function VerticalNav() {
   const classes = useStyles();
   const [isOpen, setIsOpen] = useState(true);
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 1525);
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 1499);
 
   const updateMedia = () => {
-    setDesktop(window.innerWidth > 1525);
+    setDesktop(window.innerWidth > 1499);
   };
 
   useEffect(() => {

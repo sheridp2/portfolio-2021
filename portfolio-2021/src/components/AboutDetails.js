@@ -18,7 +18,12 @@ export default function AboutDetails() {
     <>
       <Grid item xs={12} sm={6} md={4}>
         <Flippy>
-          <FrontSide style={{ padding: 0, boxShadow: "none" }}>
+          <FrontSide
+            style={{
+              padding: 0,
+              boxShadow: "none",
+            }}
+          >
             <div className="property-card">
               <div
                 className="property-image"

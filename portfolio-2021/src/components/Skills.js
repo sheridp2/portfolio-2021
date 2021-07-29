@@ -31,7 +31,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(1625)]: {
       marginRight: 0,
     },
-    [theme.breakpoints.down(1525)]: {
+    [theme.breakpoints.down(1540)]: {
+      marginLeft: 260,
+    },
+    [theme.breakpoints.down(1499)]: {
       marginLeft: 0,
       maxWidth: "100%",
     },
