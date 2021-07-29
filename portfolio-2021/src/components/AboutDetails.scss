@@ -28,7 +28,15 @@ p {
   -webkit-box-shadow: 15px 15px 27px rgba(0, 0, 0, 0.5),
     -15px -15px 27px #ffffff;
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
-  transform: skew(-2deg);
+  transform: skew(-1deg);
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s, box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 6px 20px 0 rgba(0, 0, 0, 0.3);
+    top: -20px;
+  }
 }
 
 /* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
@@ -36,7 +44,7 @@ p {
 /* Top Half of card, image. */
 
 .property-image {
-  height: 20em;
+  height: 30em;
   width: 95%;
   padding: 1em 2em;
   position: Absolute;
@@ -44,7 +52,6 @@ p {
   -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -76,8 +83,6 @@ p {
   padding: 0.5em 1em;
   text-align: center;
 }
-
-/* Social Icons */
 
 /* Property Cards Hover States */
 
