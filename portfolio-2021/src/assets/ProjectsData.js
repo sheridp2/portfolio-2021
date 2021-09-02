@@ -3,11 +3,13 @@ import dashboardInsightsImage from "./images/dashboard-insights.png";
 import guessWorkImage from "./images/guesswork.png";
 import ai4accessibilityImage from "./images/ai4accessibility.png";
 import nbaAssistImage from "./images/nbaAssist.png";
-import emailyImage from "./images/emailyImage.png";
 import TI101 from "./images/img-2.png";
 import spotImage from "./images/img-3.png";
 import zipToSaleImage from "./images/ziptosaleImage.png";
 import flukeHomepage from "./images/img-5.png";
+import cocktail from "./images/cocktails.png";
+import recnet from "./images/recnet.png";
+import memories from "./images/memories.png";
 
 const ProjectsData = [
   {
@@ -79,6 +81,7 @@ const ProjectsData = [
     ],
     featured: true,
   },
+
   {
     name: "Reacter - Social Media App",
     image: reacterImage,
@@ -109,6 +112,7 @@ const ProjectsData = [
     ],
     featured: true,
   },
+
   {
     name: "Fluke - Spot The Differences",
     image: spotImage,
@@ -159,6 +163,75 @@ const ProjectsData = [
     featured: true,
   },
   {
+    name: "Memories - React Social Media Image App",
+    image: memories,
+    description:
+      "Store and share memories and images and also like and comment other peoples",
+    frontendRepo: "https://github.com/sheridp2/React-node-memories",
+    backendRepo: "N/A",
+    url: "https://react-node-memories.vercel.app/",
+    company: "Personal",
+    technolgies: [
+      { skillName: "React" },
+      { skillName: "Redux" },
+
+      {
+        skillName: "Express",
+      },
+      {
+        skillName: "NodeJS",
+      },
+      {
+        skillName: "MaterialUI",
+      },
+    ],
+    featured: true,
+  },
+  {
+    name: "Rec.net Clone",
+    image: recnet,
+    description: "Clone Rec.net for practice",
+    frontendRepo: "https://github.com/sheridp2/rec.net-clone",
+    backendRepo: "N/A",
+    url: "https://rec-net-clone.vercel.app/",
+    company: "Personal",
+    technolgies: [
+      { skillName: "React" },
+
+      {
+        skillName: "CSS3",
+      },
+      {
+        skillName: "HTML",
+      },
+      {
+        skillName: "BootStrap",
+      },
+    ],
+    featured: false,
+  },
+  {
+    name: "Cocktail Finder",
+    image: cocktail,
+    description: "App to help you find cocktail recepies",
+    frontendRepo:
+      "https://github.com/sheridp2/react-projects/tree/main/cocktail-finder",
+    backendRepo: "N/A",
+    url: "https://cocktail-finder.vercel.app/",
+    company: "Personal",
+    technolgies: [
+      { skillName: "React" },
+
+      {
+        skillName: "CSS3",
+      },
+      {
+        skillName: "HTML",
+      },
+    ],
+    featured: false,
+  },
+  {
     name: "NBA Assist - Player Card/Stat App",
     image: nbaAssistImage,
     description: "NBA player stat/trading card app",
@@ -176,35 +249,6 @@ const ProjectsData = [
       {
         skillName: "Express",
         fontAwesomeClassname: "",
-      },
-    ],
-    featured: false,
-  },
-  {
-    name: "Emaily - Email Survey App",
-    image: emailyImage,
-    description: "App for business to email surveys to users",
-    frontendRepo: "https://github.com/sheridp2/nba-assist",
-    backendRepo: "N/A",
-    url: "https://nba-assist.vercel.app/",
-    company: "Personal",
-    technolgies: [
-      { skillName: "React" },
-
-      {
-        skillName: "NodeJS",
-      },
-      {
-        skillName: "Express",
-      },
-      {
-        skillName: "MongoDB",
-      },
-      {
-        skillName: "Stripe",
-      },
-      {
-        skillName: "Google Oauth",
       },
     ],
     featured: false,
