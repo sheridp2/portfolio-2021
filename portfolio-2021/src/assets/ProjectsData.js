@@ -35,7 +35,8 @@ const ProjectsData = [
   {
     name: "Dashboard Insights - Accessibility Dashboard",
     image: dashboardInsightsImage,
-    description: "Dashboard Insights Description",
+    description:
+      "Web Accessible dashboard app categorizing Microsoft product accessiblity threads",
     frontendRepo: "N/A",
     backendRepo: "N/A",
     url: "http://dashboardaccessibility.azurewebsites.net/",
@@ -137,7 +138,8 @@ const ProjectsData = [
   {
     name: "AI for Accesibility - AI Captioning App",
     image: ai4accessibilityImage,
-    description: "Dashboard Insights Description",
+    description:
+      "Web Accessible app that take in a video and uses AI to generate audio description and caption files",
     frontendRepo: "N/A",
     backendRepo: "N/A",
     url: "https://ai4accessibility.azurewebsites.net/",
