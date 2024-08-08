@@ -2,8 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Container, Grid } from "@material-ui/core";
 
-import { Fade } from "react-reveal";
-
 import Skills from "./Skills";
 import About from "./About";
 import worker from "../assets/lottie/patrick-dev.json";
@@ -95,37 +93,35 @@ function Main(props) {
           </div>
 
           <Container maxWidth="lg" className={classes.mainContainer}>
-            <Fade top duration={1000} distance="40px">
-              <div>
-                <Grid container>
-                  <Grid
-                    item
-                    lg={6}
-                    md={6}
-                    sm={12}
-                    className={classes.meText}
-                    style={{ zIndex: 10 }}
-                  >
-                    <h1 className={classes.mainText}>
-                      Hello, I'm Patrick Sheridan, a Front-End Developer
-                    </h1>
-                    <h2 className={classes.secondaryText}>
-                      Welcome to my portfolio site
-                    </h2>
-                  </Grid>
-
-                  <Grid
-                    item
-                    lg={6}
-                    md={6}
-                    sm={12}
-                    className={classes.lottieImage}
-                  >
-                    <LottieAnimate animationData={worker} />
-                  </Grid>
+            <div>
+              <Grid container>
+                <Grid
+                  item
+                  lg={6}
+                  md={6}
+                  sm={12}
+                  className={classes.meText}
+                  style={{ zIndex: 10 }}
+                >
+                  <h1 className={classes.mainText}>
+                    Hello, I'm Patrick Sheridan, a Front-End Developer
+                  </h1>
+                  <h2 className={classes.secondaryText}>
+                    Welcome to my portfolio site
+                  </h2>
                 </Grid>
-              </div>
-            </Fade>
+
+                <Grid
+                  item
+                  lg={6}
+                  md={6}
+                  sm={12}
+                  className={classes.lottieImage}
+                >
+                  <LottieAnimate animationData={worker} />
+                </Grid>
+              </Grid>
+            </div>
           </Container>
           <div className="separator separator-bottom separator-skew">
             <svg

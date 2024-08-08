@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { UncontrolledTooltip } from "reactstrap";
-import { Fade } from "react-reveal";
 
 import TechData from "../assets/TechData";
 
@@ -83,7 +82,6 @@ function Skills() {
   return (
     <div className={classes.returnedTech}>
       <Container className={classes.mainContainer}>
-        <Fade duration={1000} distance="40px" bottom>
           <Grid container>
             <Grid item>
               <h2
@@ -99,7 +97,6 @@ function Skills() {
               <Grid container>{allTech}</Grid>
             </Grid>
           </Grid>
-        </Fade>
       </Container>
     </div>
   );

@@ -2,14 +2,11 @@ import React from "react";
 import "./AboutDetails.scss";
 import { Grid } from "@material-ui/core";
 import patBeach from "../assets/images/pat-beach.jpg";
-import snowShoe from "../assets/images/snowshoe2.jpg";
 import worldTraveler from "../assets/images/worldtraveler.jpg";
 import forestService from "../assets/images/forestservice.JPG";
 import forestService2 from "../assets/images/forestservice2.JPG";
 import alps from "../assets/images/alps.JPG";
 import paint from "../assets/images/paint.jpg";
-
-import { Fade } from "react-reveal";
 
 import Flippy, { FrontSide, BackSide } from "react-flippy";
 

@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 
 import ResponsiveDrawer from "./ResponsiveDrawer";
-import { Container, Grid } from "@material-ui/core";
-import resume from "../assets/images/Patrick_Sheridan_Resume_2021.pdf";
+import { Grid } from "@material-ui/core";
+import resume from "../assets/images/Patrick-Sheridan-Resume-2024.pdf";
 
 // reactstrap components
 import {
