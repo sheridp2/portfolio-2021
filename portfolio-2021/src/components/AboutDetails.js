@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./AboutDetails.scss";
 import { Grid } from "@material-ui/core";
 import patBeach from "../assets/images/pat-beach.jpg";
@@ -12,114 +13,127 @@ import Flippy, { FrontSide, BackSide } from "react-flippy";
 
 export default function AboutDetails() {
   return (
-    <>
+    <Grid container spacing={2}>
       <Grid item xs={12} sm={6} md={4}>
-        <Flippy>
+        <Flippy
+          flipOnClick={true}
+        >
           <FrontSide
             style={{
-              padding: 0,
-              boxShadow: "none",
+              display: 'flex',
+              alignItems: 'center',
+              flexDirection: 'column'
             }}
           >
-            <div className="property-card">
-              <div
-                className="property-image"
-                style={{
-                  backgroundImage: `url(${patBeach})`,
-                }}
-              ></div>
+            <img
+              alt="Patrick at the beach"
+              src={patBeach}
+              style={{ maxWidth: '100%', maxHeight: '400px' }}
+            />
+              PNW native
+            <span>
 
-              <div className="property-description">
-                <h5> Full-Stack Web Developer </h5>
-                <p>
-                  Currently building a theme park wait time API for predicting
-                  waittimes
-                </p>
-              </div>
-              <a href="#">
-                <div className="property-social-icons"></div>
-              </a>
-            </div>
+              Click to flip
+            </span>
           </FrontSide>
-          <BackSide style={{ padding: 0, boxShadow: "none" }}>
-            <div className="property-card">
-              <div
-                className="property-image-back"
-                style={{
-                  backgroundImage: `url(${paint})`,
-                }}
-              ></div>
-            </div>
+          <BackSide
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexDirection: 'column'
+            }}>
+            <img
+              alt="Patrick doing a painting class"
+              src={paint} 
+              style={{ maxWidth: '100%', maxHeight: '400px' }}
+            />
+            <span >
+              (BACK SIDE)
+            </span>
           </BackSide>
         </Flippy>
       </Grid>
       <Grid item xs={12} sm={6} md={4}>
-        <Flippy>
-          <FrontSide style={{ padding: 0, boxShadow: "none" }}>
-            <div className="property-card">
-              <div
-                className="property-image"
-                style={{
-                  backgroundImage: `url(${worldTraveler})`,
-                }}
-              ></div>
+        <Flippy
+          flipOnClick={true}
+        >
+          <FrontSide
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              flexDirection: 'column'
+            }}
+          >
+            <img
+              alt="Patrick at the beach"
+              src={alps}
+              style={{ maxWidth: '100%', maxHeight: '400px' }}
+            />
+            World Traveler
+            <span>
 
-              <div className="property-description">
-                <h5> World Traveler </h5>
-                <p>18 countries and counting</p>
-              </div>
-              <a href="#">
-                <div className="property-social-icons"></div>
-              </a>
-            </div>
+            Click to flip
+            </span>
           </FrontSide>
-          <BackSide style={{ padding: 0, boxShadow: "none" }}>
-            <div className="property-card">
-              <div
-                className="property-image-back"
-                style={{
-                  backgroundImage: `url(${alps})`,
-                }}
-              ></div>
-            </div>
+          <BackSide
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexDirection: 'column'
+            }}>
+            <img
+              alt="Patrick doing a painting class"
+              src={worldTraveler} 
+              style={{ maxWidth: '100%', maxHeight: '400px' }}
+            />
+            <span >
+              (BACK SIDE)
+            </span>
           </BackSide>
         </Flippy>
       </Grid>
       <Grid item xs={12} sm={6} md={4}>
-        <Flippy>
-          <FrontSide style={{ padding: 0, boxShadow: "none" }}>
-            <div className="property-card">
-              <div
-                className="property-image"
-                style={{
-                  backgroundImage: `url(${forestService})`,
-                }}
-              ></div>
+        <Flippy
+          flipOnClick={true}
+        >
+          <FrontSide
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              flexDirection: 'column'
+            }}
+          >
+            <img
+              alt="Patrick at the beach"
+              src={forestService}
+              style={{ maxWidth: '100%', maxHeight: '400px' }}
+            />
+            Former Forest Service Ranger
+            <span>
 
-              <div className="property-description">
-                <h5> Former Forest Ranger/ Environment Scientist </h5>
-                <p>
-                  Someday I'd love to use my coding skills to help protet the
-                  natureal world
-                </p>
-              </div>
-              <a href="#">
-                <div className="property-social-icons"></div>
-              </a>
-            </div>
+              Click to flip
+            </span>
           </FrontSide>
-          <BackSide style={{ padding: 0, boxShadow: "none" }}>
-            <div className="property-card">
-              <div
-                className="property-image-back"
-                style={{
-                  backgroundImage: `url(${forestService2})`,
-                }}
-              ></div>
-            </div>
+          <BackSide
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexDirection: 'column'
+            }}>
+            <img
+              alt="Patrick doing a painting class"
+              src={forestService2} 
+              style={{ maxWidth: '100%', maxHeight: '400px' }}
+            />
+            <span >
+            B.S. in Environmental Science
+            </span>
           </BackSide>
         </Flippy>
       </Grid>
-    </>
+    </Grid>
   );
 }

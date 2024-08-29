@@ -62,7 +62,6 @@ const useStyles = makeStyles((theme) => ({
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    transform: "translate(-50%, -50%)",
     textAlign: "",
     width: 320,
     [theme.breakpoints.down("xs")]: {
@@ -118,18 +117,18 @@ function ProjectList(props) {
           flipOnClick={true}
           flipDirection="horizontal"
         >
-          <FrontSide style={{ backgroundColor: "white", padding: 0 }}>
+          <FrontSide style={{ backgroundColor: "white", padding: 0, borderRadius: "1rem" }}>
             <Card className={classes.cards} style={{ padding: 0 }}>
               <CardMedia
                 className={classes.image}
                 image={`${project.image}`}
-                style={{ height: 275, padding: 10 }}
+                style={{ height: 300, padding: 10 }}
               />
               <div className={classes.middle}>
                 <div className={classes.text}>
                   <h3
                     style={{
-                      fontWeight: "bold",
+                      fontSize: "1.5rem"
                     }}
                   >
                     {project.name}
@@ -169,12 +168,12 @@ function ProjectList(props) {
           <BackSide style={{ backgroundColor: "white" }}>
             <h3
               style={{
-                fontWeight: "bold",
+                fontSize: "1.5rem"
               }}
             >
               {project.name}
             </h3>
-            <h4>
+            <h4 style={{ margin: 0 }}>
               <Badge color="warning">{project.company}</Badge>
             </h4>
 
@@ -182,16 +181,18 @@ function ProjectList(props) {
               {project.description}
             </h6>
             <Grid container style={{ position: "absolute", bottom: 20 }}>
-              <Grid item xs={6}>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  href={project.frontendRepo}
-                  style={{ fontSize: 18 }}
-                >
-                  Github Repo <span style={{ fontSize: 18 }}>&#x2192;</span>
-                </a>
-              </Grid>
+              {project.frontendRepo !== 'N/A' &&
+                <Grid item xs={6}>
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href={project.frontendRepo}
+                    style={{ fontSize: 18 }}
+                  >
+                    Github Repo <span style={{ fontSize: 18 }}>&#x2192;</span>
+                  </a>
+                </Grid>
+              }
               <Grid item xs={6}>
                 <a
                   rel="noreferrer"

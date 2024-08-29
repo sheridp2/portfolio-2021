@@ -55,10 +55,6 @@ function VerticalNav() {
     return () => window.removeEventListener("resize", updateMedia);
   });
 
-  function toggle() {
-    setIsOpen(!isOpen);
-  }
-
   return (
     <>
       {isDesktop ? (
