@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 
   aboutContainer: {
     position: "relative",
-    top: "-150px",
+    top: "-220px",
 
     [theme.breakpoints.down("md")]: {
       top: "-150px",

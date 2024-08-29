@@ -4,24 +4,36 @@ const TechnologiesData = [
     fontAwesomeClassname: "logos:react",
   },
   {
-    skillName: "JavaScript",
-    fontAwesomeClassname: "logos:javascript",
+    skillName: "Vue3",
+    fontAwesomeClassname: "logos:vue",
   },
   {
-    skillName: "CSS3",
-    fontAwesomeClassname: "vscode-icons:file-type-css",
+    skillName: "JavaScript",
+    fontAwesomeClassname: "logos:javascript",
   },
   {
     skillName: "HTML5",
     fontAwesomeClassname: "vscode-icons:file-type-html",
   },
   {
-    skillName: "NodeJS",
-    fontAwesomeClassname: "logos:nodejs-icon",
+    skillName: "CSS3",
+    fontAwesomeClassname: "vscode-icons:file-type-css",
   },
   {
-    skillName: "MongoDB",
-    fontAwesomeClassname: "vscode-icons:file-type-mongo",
+    skillName: "RiotJS",
+    fontAwesomeClassname: "logos:riot",
+  },
+  {
+    skillName: "Pinia",
+    fontAwesomeClassname: "logos:pinia",
+  },
+  {
+    skillName: "Redux",
+    fontAwesomeClassname: "logos:redux",
+  },
+  {
+    skillName: "NodeJS",
+    fontAwesomeClassname: "logos:nodejs-icon",
   },
 
   {

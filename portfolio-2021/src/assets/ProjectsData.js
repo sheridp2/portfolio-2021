@@ -1,6 +1,5 @@
 import reacterImage from "./images/reacter.png";
 import dashboardInsightsImage from "./images/dashboard-insights.png";
-import guessWorkImage from "./images/guesswork.png";
 import ai4accessibilityImage from "./images/ai4accessibility.png";
 import nbaAssistImage from "./images/nbaAssist.png";
 import TI101 from "./images/img-2.png";
@@ -10,13 +9,55 @@ import flukeHomepage from "./images/img-5.png";
 import cocktail from "./images/cocktails.png";
 import recnet from "./images/recnet.png";
 import memories from "./images/memories.png";
+import reiCart from "./images/reiCart.png";
+import reiCheckout from "./images/reiCheckout.png";
 
 const ProjectsData = [
+  {
+    name: "REI - Cart",
+    image: reiCart,
+    description: "REI e-commerce shopping cart",
+    frontendRepo: "N/A",
+    backendRepo: "N/A",
+    url: "https://www.rei.com/ShoppingCart",
+    company: "REI",
+    technolgies: [
+      { skillName: "Vue3" },
+
+      {
+        skillName: "Vuex",
+      },
+      {
+        skillName: "CSS",
+      },
+    ],
+    featured: true,
+  },
+
+  {
+    name: "REI - Checkout",
+    image: reiCheckout,
+    description: "REI e-commerce checkout; Including contact/billing, shipping, payment, and membership status",
+    frontendRepo: "N/A",
+    backendRepo: "N/A",
+    url: "https://www.rei.com/ShoppingCart",
+    company: "REI",
+    technolgies: [
+      { 
+        skillName: "RiotJS" 
+      },
+      {
+        skillName: "CSS",
+      },
+    ],
+    featured: true,
+  },
+
   {
     name: "Fluke - Thermal Imaging 101",
     image: TI101,
     description: "Fluke guide to different aspects of thermal imaging",
-    frontendRepo: "",
+    frontendRepo: "N/A",
     backendRepo: "N/A",
     url: "http://a.fluke.com/IG-GL-TI-THERMALIMAGING101-LP-1-A",
     company: "Fluke",
@@ -33,10 +74,10 @@ const ProjectsData = [
     featured: true,
   },
   {
-    name: "Dashboard Insights - Accessibility Dashboard",
+    name: "Microsoft Accessibility Dashboard",
     image: dashboardInsightsImage,
     description:
-      "Web Accessible dashboard app categorizing Microsoft product accessiblity threads",
+      "Web dashboard app categorizing Microsoft product accessiblity threads",
     frontendRepo: "N/A",
     backendRepo: "N/A",
     url: "http://dashboardaccessibility.azurewebsites.net/",
@@ -63,7 +104,7 @@ const ProjectsData = [
     image: flukeHomepage,
     description:
       "Upkeep, maintenance, and NPI launches of Fluke's US and 63 global websites ",
-    frontendRepo: "",
+      frontendRepo: "N/A",
     backendRepo: "N/A",
     url: "https://www.fluke.com/en-us",
     company: "Fluke",
@@ -87,7 +128,7 @@ const ProjectsData = [
     name: "Reacter - Social Media App",
     image: reacterImage,
     description:
-      "Social media app similar to Twitter. Includes Login/Register, Commenting, and Liking ",
+      "Social media app like Twitter. Includes Login/Register, Commenting, and Liking",
     frontendRepo: "https://github.com/sheridp2/react-social-media-app",
     backendRepo: "https://github.com/sheridp2/react-social-media-app-backend",
     url: "https://react-social-media-app.vercel.app/",
@@ -118,7 +159,7 @@ const ProjectsData = [
     name: "Fluke - Spot The Differences",
     image: spotImage,
     description: "Fluke thermal imager application guide and contact form",
-    frontendRepo: "",
+    frontendRepo: "N/A",
     backendRepo: "N/A",
     url: "http://a.fluke.com/IG-GL-TI-2018-TIAPPLICATIONSPECIFICLP-1-A?lcid=2eb25055-cd99-e811-80c9-00155dfd7263&lrpf=306C4BD2-C170-DE11-95B8-02BF0A064B97&plt=200000000&cra=100000000&scl=6206&redir=http://download.fluke.com/ti-thank-you/thank-you-new-camera.html",
     company: "Fluke",
@@ -139,7 +180,7 @@ const ProjectsData = [
     name: "AI for Accesibility - AI Captioning App",
     image: ai4accessibilityImage,
     description:
-      "Web Accessible app that take in a video and uses AI to generate audio description and caption files",
+      "Web Accessible app using Azure AI to generate audio description and caption",
     frontendRepo: "N/A",
     backendRepo: "N/A",
     url: "https://ai4accessibility.azurewebsites.net/",
@@ -165,7 +206,7 @@ const ProjectsData = [
     featured: true,
   },
   {
-    name: "Memories - React Social Media Image App",
+    name: "Memories - Social Media Image App",
     image: memories,
     description:
       "Store and share memories and images and also like and comment other peoples",
@@ -255,28 +296,11 @@ const ProjectsData = [
     ],
     featured: false,
   },
-
-  {
-    name: "Guesswork - 4 player Triva",
-    image: guessWorkImage,
-    description:
-      "Trivia app. Up to 4 players, 3 difficulties. Question pulled from multiple categories",
-    frontendRepo: "https://github.com/sheridp2/triviapp",
-    backendRepo: "N/A",
-    url: "https://guesswork.herokuapp.com/",
-    company: "Personal",
-    technolgies: [
-      { skillName: "React", fontAwesomeClassname: "logos:react" },
-
-      { skillName: "Redux", fontAwesomeClassname: "" },
-    ],
-    featured: false,
-  },
   {
     name: "Fluke - Zip to Sales Tool",
     image: zipToSaleImage,
     description: "Fluke internal tool for finding sales reps based on zipcode",
-    frontendRepo: "",
+    frontendRepo: "N/A",
     backendRepo: "N/A",
     url: "https://content.fluke.com/test/ziptosales/ziptosales.html",
     company: "Fluke",
