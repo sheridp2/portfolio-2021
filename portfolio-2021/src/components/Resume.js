@@ -1,5 +1,5 @@
 import React from "react";
-import pdf from "../assets/images/Patrick-Sheridan-Resume-2024.pdf";
+import pdf from "../assets/images/Patrick-Sheridan-resume-2025.pdf";
 
 export default function Resume() {
   return (

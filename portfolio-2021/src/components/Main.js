@@ -104,7 +104,7 @@ function Main(props) {
                   style={{ zIndex: 10 }}
                 >
                   <h1 className={classes.mainText}>
-                    Hello, I'm Patrick Sheridan, a Front-End Developer
+                    Hello, I'm Patrick Sheridan, a Full-Stack Engineer
                   </h1>
                   <h2 className={classes.secondaryText}>
                     Welcome to my portfolio site
