@@ -11,6 +11,7 @@ import recnet from "./images/recnet.png";
 import memories from "./images/memories.png";
 import reiCart from "./images/reiCart.png";
 import reiCheckout from "./images/reiCheckout.png";
+import expenseTracker from "./images/Expense-Tracker.png";
 
 const ProjectsData = [
   {
@@ -37,14 +38,15 @@ const ProjectsData = [
   {
     name: "REI - Checkout",
     image: reiCheckout,
-    description: "REI e-commerce checkout; Including contact/billing, shipping, payment, and membership status",
+    description:
+      "REI e-commerce checkout; Including contact/billing, shipping, payment, and membership status",
     frontendRepo: "N/A",
     backendRepo: "N/A",
     url: "https://www.rei.com/ShoppingCart",
     company: "REI",
     technolgies: [
-      { 
-        skillName: "RiotJS" 
+      {
+        skillName: "RiotJS",
       },
       {
         skillName: "CSS",
@@ -52,6 +54,7 @@ const ProjectsData = [
     ],
     featured: true,
   },
+ 
 
   {
     name: "Fluke - Thermal Imaging 101",
@@ -98,13 +101,43 @@ const ProjectsData = [
     ],
     featured: true,
   },
+   {
+    name: "Expense Tracker",
+    image: expenseTracker,
+    description:
+      "Personal finance tracking application for analyzing savings and expense trends",
+    frontendRepo: "https://github.com/sheridp2/Expense-Tracker",
+    backendRepo: "https://github.com/sheridp2/Expense-Tracker-Backend",
+    url: "https://expense-tracker-steel-zeta.vercel.app/dashboard",
+    company: "Personal",
+    technolgies: [
+      { skillName: "React", fontAwesomeClassname: "logos:react" },
+
+      {
+        skillName: "NodeJS",
+        fontAwesomeClassname: "logos:nodejs-icon",
+      },
+      {
+        skillName: "ExpressJS",
+      },
+      {
+        skillName: "MongoDB",
+        fontAwesomeClassname: "vscode-icons:file-type-mongo",
+      },
+      {
+        skillName: "Tailwind CSS",
+        fontAwesomeClassname: "",
+      },
+    ],
+    featured: true,
+  },
 
   {
     name: "Fluke - US and Global websites",
     image: flukeHomepage,
     description:
       "Upkeep, maintenance, and NPI launches of Fluke's US and 63 global websites ",
-      frontendRepo: "N/A",
+    frontendRepo: "N/A",
     backendRepo: "N/A",
     url: "https://www.fluke.com/en-us",
     company: "Fluke",
