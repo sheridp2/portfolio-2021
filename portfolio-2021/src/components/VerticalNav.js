@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import ResponsiveDrawer from "./ResponsiveDrawer";
 import { Grid } from "@material-ui/core";
-import resume from "../assets/images/Patrick-Sheridan-resume-2025.pdf";
+import resume from "../assets/images/Patrick_Sheridan_resume.pdf";
 
 // reactstrap components
 import {

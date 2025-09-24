@@ -12,6 +12,7 @@ import memories from "./images/memories.png";
 import reiCart from "./images/reiCart.png";
 import reiCheckout from "./images/reiCheckout.png";
 import expenseTracker from "./images/Expense-Tracker.png";
+import themeparkWaitTime from "./images/themepark-waittime.png";
 
 const ProjectsData = [
   {
@@ -101,6 +102,38 @@ const ProjectsData = [
     ],
     featured: true,
   },
+  {
+    name: "Theme Park Wait Times",
+    image: themeparkWaitTime,
+    description:
+      "Web dashboard app displaying real-time wait times for theme park attractions and someday predictive wait times",
+    frontendRepo: "https://github.com/sheridp2/theme-park-wait-frontend",
+    backendRepo: "https://github.com/sheridp2/theme-park-wait-times",
+    url: "https://theme-park-wait-frontend.vercel.app/",
+    company: "Personal",
+    technolgies: [
+
+      { skillName: "React", fontAwesomeClassname: "logos:react" },
+
+      {
+        skillName: "NodeJS",
+        fontAwesomeClassname: "logos:nodejs-icon",
+      },
+      {
+        skillName: "ExpressJS",
+      },
+      {
+        skillName: "MongoDB",
+        fontAwesomeClassname: "vscode-icons:file-type-mongo",
+      },
+      {
+        skillName: "Tailwind CSS",
+        fontAwesomeClassname: "",
+      },
+    ],
+    featured: true,
+  },
+  
    {
     name: "Expense Tracker",
     image: expenseTracker,
@@ -108,7 +141,7 @@ const ProjectsData = [
       "Personal finance tracking application for analyzing savings and expense trends",
     frontendRepo: "https://github.com/sheridp2/Expense-Tracker",
     backendRepo: "https://github.com/sheridp2/Expense-Tracker-Backend",
-    url: "https://expense-tracker-steel-zeta.vercel.app/dashboard",
+    url: "https://expense-tracker-steel-zeta.vercel.app",
     company: "Personal",
     technolgies: [
       { skillName: "React", fontAwesomeClassname: "logos:react" },
